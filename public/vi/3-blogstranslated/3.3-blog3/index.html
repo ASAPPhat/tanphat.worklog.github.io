@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.151.1">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="khoado7577@gmail.com" />
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>Blog 3: Strands Agents và Phương pháp Hướng mô hình :: Báo cáo thực tập</title>
+
+    
+    <link href="../../../css/nucleus.css?1765299735" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1765299735" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1765299735" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1765299735" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1765299735" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1765299735" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1765299735" rel="stylesheet">
+    <link href="../../../css/theme.css?1765299735" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1765299735" rel="stylesheet">
+    
+    <link href="../../../css/theme-workshop.css?1765299735" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.3.1.min.js?1765299735"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="../../../vi/3-blogstranslated/3.3-blog3/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="../../../">
+  <svg
+    id="Layer_1"
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 60 30"
+    width="30%"
+  >
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #fff;
+        }
+        .cls-2 {
+          fill: #f90;
+          fill-rule: evenodd;
+        }
+      </style>
+    </defs>
+    <title>AWS-Logo_White-Color</title>
+    <path
+      class="cls-1"
+      d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"
+    ></path>
+    <path
+      class="cls-2"
+      d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"
+    ></path>
+  </svg>
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1765299735"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1765299735"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/asapphat.github.io\/tanphat.worklog.github.io\/\/vi";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1765299735"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký công việc"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/">
+     <b> 1. </b> Nhật ký công việc 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Worklog Tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Worklog Tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Worklog Tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Worklog Tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Worklog Tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Worklog Tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Worklog Tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Worklog Tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Worklog Tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Worklog Tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Worklog Tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Worklog Tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Worklog Tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Worklog Tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Worklog Tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Worklog Tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Worklog Tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Worklog Tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Worklog Tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Worklog Tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.11-week11/"
+  title="Worklog Tuần 11"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.11-week11/">
+     <b> 1.11. </b> Worklog Tuần 11 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.12-week12/"
+  title="Worklog Tuần 12"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/1-worklog/1.12-week12/">
+     <b> 1.12. </b> Worklog Tuần 12 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Đề Xuất"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/2-proposal/">
+     <b> 2. </b> Đề Xuất 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/3-blogstranslated/"
+  title="Các bài blogs đã dịch"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/">
+     <b> 3. </b> Các bài blogs đã dịch 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.1-blog1/"
+  title="Blog 1: Tổng hợp Hàng tuần AWS - Strands Agents"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.1-blog1/">
+     <b> 3.1. </b> Blog 1: Tổng hợp Hàng tuần AWS - Strands Agents 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.2-blog2/"
+  title="Blog 2: Xây dựng Các Agents AI Thế hệ tiếp theo"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.2-blog2/">
+     <b> 3.2. </b> Blog 2: Xây dựng Các Agents AI Thế hệ tiếp theo 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/3-blogstranslated/3.3-blog3/"
+  title="Blog 3: Strands Agents và Phương pháp Hướng mô hình"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="../../../vi/3-blogstranslated/3.3-blog3/">
+     <b> 3.3. </b> Blog 3: Strands Agents và Phương pháp Hướng mô hình 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/4-eventparticipated/"
+  title="Các events đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/">
+     <b> 4. </b> Các events đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+  title="Event 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.1-event1/">
+     <b> 4.1. </b> Event 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+  title="Event 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.2-event2/">
+     <b> 4.2. </b> Event 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.3-event3/"
+  title="Event 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.3-event3/">
+     <b> 4.3. </b> Event 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.4-event4/"
+  title="Event 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.4-event4/">
+     <b> 4.4. </b> Event 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.5-event5/"
+  title="Event 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.5-event5/">
+     <b> 4.5. </b> Event 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.6-event6/"
+  title="Event 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.6-event6/">
+     <b> 4.6. </b> Event 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.7-event7/"
+  title="Event7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/4-eventparticipated/4.7-event7/">
+     <b> 4.7. </b> Event7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/6-self-evaluation/">
+     <b> 6. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/7-feedback/"
+  title="Chia sẻ, đóng góp ý kiến"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/7-feedback/">
+     <b> 7. </b> Chia sẻ, đóng góp ý kiến 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/5-workshop/"
+  title="5-Workshops"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/">
+    5-Workshops 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/">
+     <b> 5. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.1-workshop-overview/"
+  title="Tổng quan Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.1-workshop-overview/">
+     <b> 5.1. </b> Tổng quan Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.2-prerequisite/"
+  title="Yêu cầu tiên quyết"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.2-prerequisite/">
+     <b> 5.2. </b> Yêu cầu tiên quyết 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.3-architecture/"
+  title="Kiến trúc Dự án"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.3-architecture/">
+     <b> 5.3. </b> Kiến trúc Dự án 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.4-setup-aws/"
+  title="Thiết lập Môi trường AWS"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.4-setup-aws/">
+     <b> 5.4. </b> Thiết lập Môi trường AWS 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.5-database-setup/"
+  title="Thiết lập Database (DynamoDB)"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.5-database-setup/">
+     <b> 5.5. </b> Thiết lập Database (DynamoDB) 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.6-authentication/"
+  title="Dịch vụ Xác thực"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.6-authentication/">
+     <b> 5.6. </b> Dịch vụ Xác thực 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.7-backend-services/"
+  title="Dịch vụ Backend"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.7-backend-services/">
+     <b> 5.7. </b> Dịch vụ Backend 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.8-frontend/"
+  title="Phát triển Frontend"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.8-frontend/">
+     <b> 5.8. </b> Phát triển Frontend 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.9-deployment/"
+  title="Triển khai"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.9-deployment/">
+     <b> 5.9. </b> Triển khai 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.10-testing/"
+  title="Kiểm tra &amp; Giám sát"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.10-testing/">
+     <b> 5.10. </b> Kiểm tra &amp; Giám sát 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5-workshop/5.11-cleanup/"
+  title="Dọn dẹp"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="../../../vi/5-workshop/5-workshop/5.11-cleanup/">
+     <b> 5.11. </b> Dọn dẹp 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+     
+  </ul>
+  
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"
+            ><i class='fab fa-facebook'></i> AWS Study Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="https://asapphat.github.io/tanphat.worklog.github.io/3-blogstranslated/3.3-blog3/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="https://asapphat.github.io/tanphat.worklog.github.io/vi/3-blogstranslated/3.3-blog3/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    
+    <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Migrate" Alt="web counter" border="0" /></a> <br>
+    <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0"
+        title="Total CLoud Journey" Alt="web counter" border="0" />
+
+</left>
+<left>
+    <br>
+    <br>
+    <b>Last Updated</b><br>
+    <i>
+        <span id="lastUpdated" style="color:orange;"></span>
+    </i>
+
+    <script>
+        
+        const today = new Date();
+        
+        const formattedDate = today.toLocaleDateString('en-GB');
+        
+        document.getElementById('lastUpdated').textContent = formattedDate;
+    </script>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+
+    <i> <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud Journey </a> <br>
+
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../../vi/'>Báo cáo thực tập</a> > <a href='../../../vi/3-blogstranslated/'>Các bài blogs đã dịch</a> > Blog 3: Strands Agents và Phương pháp Hướng mô hình
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#blog-mã-nguồn-mở-của-aws"><strong>Blog mã nguồn mở của AWS</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#khi-việc-điều-phối-trở-thành-một-hạn-chế"><strong>Khi việc điều phối trở thành một hạn chế</strong></a></li>
+    <li><a href="#the-agent-loop-nơi-trí-tuệ-gặp-hành-động"><strong>The agent loop</strong>: Nơi trí tuệ gặp hành động</a></li>
+    <li><a href="#hướng-dẫn-trí-thông-minh-thông-qua-ngữ-cảnh"><strong>Hướng dẫn trí thông minh thông qua ngữ cảnh</strong></a></li>
+    <li><a href="#mở-rộng-quy-mô-các-tác-nhân-theo-mô-hình-với-strands"><strong>Mở rộng quy mô các tác nhân theo mô hình với Strands</strong></a></li>
+    <li><a href="#tác-nhân-dưới-dạng-công-cụ-trí-tuệ-phân-cấp"><strong>Tác nhân dưới dạng công cụ: Trí tuệ phân cấp</strong></a></li>
+    <li><a href="#swarms-hợp-tác-tự-động"><strong>Swarms: Hợp tác tự động</strong></a></li>
+    <li><a href="#đồ-thị-quy-trình-làm-việc-có-cấu-trúc"><strong>Đồ thị: Quy trình làm việc có cấu trúc</strong></a></li>
+    <li><a href="#siêu-tác-nhân-điều-phối-linh-hoạt"><strong>Siêu tác nhân: Điều phối linh hoạt</strong></a></li>
+    <li><a href="#xây-dựng-niềm-tin-thông-qua-đánh-giá"><strong>Xây dựng niềm tin thông qua đánh giá</strong></a></li>
+    <li><a href="#sự-thay-đổi-mô-hình-từ-kiểm-soát-cứng-nhắc-đến-thích-ứng-động"><strong>Sự thay đổi mô hình: Từ kiểm soát cứng nhắc đến thích ứng động</strong></a>
+      <ul>
+        <li><a href="#arron-bailiss"><strong>Arron Bailiss</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Blog 3: Strands Agents và Phương pháp Hướng mô hình
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="blog-mã-nguồn-mở-của-aws"><strong><a href="https://aws.amazon.com/blogs/opensource/">Blog mã nguồn mở của AWS</a></strong></h2>
+<h1 id="strands-agents-và-phương-pháp-tiếp-cận-theo-mô-hình">Strands Agents và Phương pháp tiếp cận theo mô hình</h1>
+<p>bởi Arron Bailiss vào 12 THÁNG 9 2025 trong<a href="https://aws.amazon.com/blogs/opensource/category/artificial-intelligence/"> </a><a href="https://aws.amazon.com/blogs/opensource/category/artificial-intelligence/">Trí tuệ nhân tạo</a>,<a href="https://aws.amazon.com/blogs/opensource/category/open-source/"> </a><a href="https://aws.amazon.com/blogs/opensource/category/open-source/">Mã nguồn mở</a>,<a href="https://aws.amazon.com/blogs/opensource/category/post-types/technical-how-to/"> </a><a href="https://aws.amazon.com/blogs/opensource/category/post-types/technical-how-to/">Hướng dẫn kỹ thuật</a><a href="https://aws.amazon.com/blogs/opensource/strands-agents-and-the-model-driven-approach/"> </a><a href="https://aws.amazon.com/blogs/opensource/strands-agents-and-the-model-driven-approach/">Permalink</a><a href="https://aws.amazon.com/blogs/opensource/strands-agents-and-the-model-driven-approach/#Comments"> </a><a href="https://aws.amazon.com/blogs/opensource/strands-agents-and-the-model-driven-approach/#Comments">Bình luận</a><a href="https://aws.amazon.com/blogs/opensource/strands-agents-and-the-model-driven-approach/"> </a><a href="https://aws.amazon.com/blogs/opensource/strands-agents-and-the-model-driven-approach/">Chia sẻ</a></p>
+<p>Cho đến gần đây, việc xây dựng các agent AI có nghĩa là phải vật lộn với các khung điều phối phức tạp. Các nhà phát triển đã viết các trạng thái máy phức tạp, các quy trình làm việc được xác định trước và mã xử lý lỗi mở rộng để hướng dẫn các mô hình ngôn ngữ thông qua các tác vụ nhiều bước. Chúng tôi cần xây dựng các cây quyết định phức tạp để xử lý các trường hợp “nếu lệnh gọi API không thành công?” hoặc “nếu người dùng hỏi điều gì đó bất ngờ?” Mặc dù đã nỗ lực, các tác nhân vẫn bị hỏng khi gặp phải các tình huống không lường trước được.</p>
+<p>Strands Agents SDK áp dụng một <strong>phương pháp tiếp cận theo mô hình</strong> giúp loại bỏ hoàn toàn sự mong manh này. Thay vì cố gắng dự đoán và lập trình cho mọi tình huống có thể xảy ra, chúng tôi để các mô hình ngôn ngữ lớn hiện đại tự điều khiển hành vi của chúng, đưa ra các quyết định thông minh về việc sử dụng công cụ và thích ứng linh hoạt với bất cứ điều gì xảy ra. Cách tiếp cận này bền bỉ, có khả năng phục hồi tốt hơn vì nó cho phép các mô hình suy luận các vấn đề một cách linh hoạt. Khi một lệnh gọi API không thành công, mô hình không bị sập – nó suy luận về các giải pháp thay thế. Khi người dùng hỏi điều gì đó bất ngờ, mô hình không tuân theo một đường dẫn được xác định trước “Tôi không hiểu” – nó tìm ra cách để giúp đỡ, sử dụng các công cụ có sẵn. Khả năng suy luận của mô hình xử lý các trường hợp đặc biệt tốt hơn bất kỳ máy trạng thái nào chúng tôi có thể viết.</p>
+<p>Cách tiếp cận dựa trên mô hình xuất phát từ kinh nghiệm thực tế của các nhóm AWS trong việc xây dựng các agent sản xuất cho<a href="https://kiro.dev/"> </a><a href="https://kiro.dev/">Kiro</a>,<a href="https://aws.amazon.com/q/developer/"> </a><a href="https://aws.amazon.com/q/developer/">Amazon Q Developer</a> và<a href="https://aws.amazon.com/glue/"> </a><a href="https://aws.amazon.com/glue/">AWS Glue</a>. Những gì chúng tôi khám phá đã thay đổi hoàn toàn cách chúng tôi nghĩ về kiến trúc agent: các khung điều phối mà chúng tôi đã xây dựng để hướng dẫn các mô hình trước đó giờ đây đang cản trở những gì các LLM hiện đại có thể làm một cách tự nhiên.</p>
+<p>Tuy nhiên, việc sử dụng mô hình làm bộ điều phối không có nghĩa là hy sinh quyền kiểm soát của nhà phát triển. Strands cung cấp một giao diện gọn gàng, đơn giản giúp bạn bắt đầu trong vài phút, đồng thời cung cấp khả năng cấu hình mạnh mẽ khi bạn cần. Các công cụ đánh giá tích hợp giúp bạn hiểu và xác thực hành vi của tác nhân, đảm bảo bạn duy trì sự tự tin ngay cả khi các mô hình đưa ra quyết định tự chủ. Sự cân bằng giữa tính đơn giản và tính linh hoạt này là điều làm cho phương pháp tiếp cận theo mô hình trở nên thực tế cho cả việc tạo mẫu nhanh và các hệ thống sản xuất. Strands phát triển cùng với bạn.</p>
+<p>Trong bài đăng này, chúng ta sẽ khám phá cách phương pháp tiếp cận theo mô hình xuất phát từ kinh nghiệm sản xuất thực tế và chỉ cho bạn các mẫu thực tế để xây dựng các agent có thể tự suy nghĩ.</p>
+<h2 id="khi-việc-điều-phối-trở-thành-một-hạn-chế"><strong>Khi việc điều phối trở thành một hạn chế</strong></h2>
+<p>Các khung tác nhân truyền thống xuất hiện khi các mô hình ngôn ngữ cần được hướng dẫn nhiều. Các nhà phát triển đã xây dựng các máy trạng thái phức tạp, quy trình làm việc được xác định trước và logic điều phối phức tạp vì các mô hình không thể suy luận một cách đáng tin cậy về các bước tiếp theo của chúng. Chúng tôi sẽ viết hàng trăm dòng mã chỉ để xử lý luồng giữa &ldquo;thu thập thông tin&rdquo;, &ldquo;phân tích dữ liệu&rdquo; và &ldquo;cung cấp phản hồi&rdquo; – và cuối cùng vẫn có những tác nhân bị hỏng khi người dùng đặt câu hỏi theo những cách bất ngờ.</p>
+<p>Các nhóm AWS mà tôi đã làm việc cùng để xây dựng Amazon Q Developer đã trực tiếp trải nghiệm điều này. Ban đầu, chúng tôi đã sử dụng các khung điều phối truyền thống, nhưng những thay đổi trong yêu cầu sản phẩm và hành vi của người dùng đòi hỏi nỗ lực khoa học và kỹ thuật đáng kể để hiệu chỉnh hệ thống nhằm xử lý các trường hợp sử dụng mới. Các bộ định tuyến và bộ phân loại học máy (ML) sẽ trả về các đầu ra cứng nhắc cho các biện pháp bảo vệ – văn bản tĩnh như “Tôi xin lỗi, tôi không thể trả lời câu hỏi đó” – mà không cung cấp các giải pháp thay thế hoặc giải thích theo cách tương tác hữu ích và có vẻ thông minh.</p>
+<p><strong>Các mô hình hiện đại đủ tinh vi để tự điều phối.</strong> Đây là cái nhìn sâu sắc quan trọng đã thay đổi mọi thứ đối với chúng tôi. Mặc dù các quy trình làm việc có cấu trúc vẫn có vị trí của chúng – đặc biệt là đối với các yêu cầu tuân thủ hoặc các quy trình kinh doanh được xác định rõ ràng – phương pháp tiếp cận theo mô hình loại bỏ nhu cầu điều phối cứng nhắc trong hầu hết các tình huống.</p>
+<p>Khi các nhóm Q Developer chuyển sang phương pháp tiếp cận theo mô hình, hệ thống có thể xử lý linh hoạt các yêu cầu sản phẩm đang thay đổi và phản hồi một cách mạch lạc bất kể điều gì xảy ra. Thay vì các phản hồi bảo vệ cứng nhắc, tác nhân có thể đưa ra các giải pháp thay thế và sử dụng đầu ra của biện pháp bảo vệ làm ngữ cảnh để mô hình hiểu tại sao nó không thể trả lời một số đầu vào nhất định. Điều này cho phép một cá tính và giọng điệu duy nhất trên các hệ thống đa tác nhân, cho phép các kỹ sư trên khắp Amazon đóng góp kiến thức chuyên môn của họ trong khi vẫn duy trì sự mạch lạc. Nó cũng cung cấp ngữ cảnh phù hợp cho mô hình vào đúng thời điểm với các công cụ mạnh mẽ để có các phản hồi hữu ích, thông minh.</p>
+<p>Khi bạn cung cấp cho một mô hình các công cụ, nó không chỉ thực thi chúng một cách máy móc. Nó suy luận về cách tiếp cận tốt nhất, xem xét nhiều chiến lược và điều chỉnh hành vi của mình dựa trên những gì nó khám phá. Một mô hình phân tích vấn đề về hiệu suất có thể bắt đầu với các chỉ số hệ thống, nhận ra nút thắt thực sự nằm trong cơ sở dữ liệu, chuyển sang phân tích truy vấn, và sau đó đề xuất cả các bản sửa lỗi ngay lập tức và các cải tiến kiến trúc dài hạn – tất cả mà không cần được lập trình rõ ràng cho trình tự đó.</p>
+<p>Những lợi ích về hoạt động mang tính chuyển đổi. Những gì trước đây mất hàng tháng để phát triển giờ chỉ mất vài tuần. Các nhóm của chúng tôi có thể nhanh chóng tận dụng các tính năng mới nhất của mô hình ngôn ngữ lớn (LLM) như gọi công cụ, suy nghĩ mở rộng và xen kẽ, hệ thống đa tác nhân, siêu tác nhân,<a href="https://modelcontextprotocol.io/docs/getting-started/intro"> </a><a href="https://modelcontextprotocol.io/docs/getting-started/intro">MCP</a>, và<a href="https://a2a-protocol.org/latest/"> </a><a href="https://a2a-protocol.org/latest/">A2A</a> – tất cả trong khi vẫn giữ một giao diện đơn giản cho các nhà phát triển có thể được tùy chỉnh hoàn toàn cho việc triển khai các agent AI trong sản xuất.</p>
+<p>Triết lý này mở rộng ra ngoài các tác nhân đơn lẻ. Cho dù bạn đang xây dựng một tác nhân phân tích dữ liệu đơn giản hay một hệ thống đa tác nhân phức tạp, mô hình sẽ quyết định khi nào cần cộng tác với các tác nhân khác, khi nào cần ủy thác nhiệm vụ, khi nào cần tìm hiểu sâu hơn về một vấn đề và khi nào cần cung cấp câu trả lời cuối cùng.</p>
+<h2 id="the-agent-loop-nơi-trí-tuệ-gặp-hành-động"><strong>The agent loop</strong>: Nơi trí tuệ gặp hành động</h2>
+<p>Trọng tâm của triết lý này là <a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/agents/agent-loop/">agent loop</a> – một chu trình tự nhiên của việc suy luận và hành động phản ánh cách các hệ thống thông minh suy nghĩ và làm việc. Cách tiếp cận này được xây dựng dựa trên mô hình ReAct (<a href="https://react-lm.github.io/">ReAct: Kết hợp lý luận và hành động trong các mô hình ngôn ngữ</a>), mô hình này chứng minh cách các mô hình ngôn ngữ có thể tạo ra cả các dấu vết suy luận và các hành động cụ thể cho nhiệm vụ một cách xen kẽ, tạo ra sự hợp lực lớn hơn giữa việc suy nghĩ và hành động.</p>
+<p>Mô hình tham gia vào quá trình suy luận liên tục, đặt ra các câu hỏi như:</p>
+<ul>
+<li>
+<p><em>&ldquo;Tôi đang cố gắng đạt được điều gì ở đây?&rdquo;</em></p>
+</li>
+<li>
+<p><em>&ldquo;Tôi cần thông tin gì?&rdquo;</em></p>
+</li>
+<li>
+<p><em>&ldquo;Công cụ nào sẽ hiệu quả nhất?&rdquo;</em></p>
+</li>
+<li>
+<p><em>&ldquo;Những kết quả này thay đổi sự hiểu biết của tôi như thế nào?&rdquo;</em></p>
+</li>
+<li>
+<p><em>&ldquo;Tôi nên tiếp tục khám phá hay cung cấp một câu trả lời?&rdquo;</em></p>
+</li>
+</ul>
+<p>Quá trình suy luận nội bộ này là điều làm cho các tác nhân dựa trên mô hình trở nên mạnh mẽ. Chúng không chỉ thực hiện các bước được xác định trước – chúng suy nghĩ, thích ứng và phát triển cách tiếp cận của mình trong thời gian thực.</p>
+<h2 id="hướng-dẫn-trí-thông-minh-thông-qua-ngữ-cảnh"><strong>Hướng dẫn trí thông minh thông qua ngữ cảnh</strong></h2>
+<p>Mặc dù mô hình tự điều khiển hành vi của mình, hành vi đó được định hình bởi ngữ cảnh mà nó nhận được. Trong phương pháp tiếp cận theo mô hình, bạn hướng dẫn trí thông minh của tác nhân không phải thông qua các cấu trúc điều khiển cứng nhắc, mà thông qua ngữ cảnh được xây dựng cẩn thận bao gồm các lời nhắc hệ thống, thông số kỹ thuật của công cụ và lịch sử cuộc trò chuyện.</p>
+<p>Hãy nghĩ về nó như việc thuê một nhà tư vấn lành nghề. Bạn không can thiệp vàvào từng bước của họ – thay vào đó, bạn đưa cho họ các mục tiêu rõ ràng, giải thích những nguồn lực nào có sẵn và cung cấp thông tin nền tảng liên quan. Phương pháp tiếp cận theo mô hình hoạt động theo cách tương tự.</p>
+<p><a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/agents/prompts/">Các lời nhắc hệ thống</a> thiết lập vai trò và mục tiêu của tác nhân – chúng thiết lập danh tính nền tảng và các mục tiêu cấp cao hướng dẫn mọi quá trình ra quyết định. Thay vì ra lệnh cho các bước cụ thể, các lời nhắc hệ thống hiệu quả mô tả thành công trông như thế nào và cung cấp các nguyên tắc để ra quyết định. Thay vì “Đầu tiên kiểm tra cơ sở dữ liệu, sau đó xác thực đầu vào, sau đó xử lý yêu cầu”, bạn có thể viết “Bạn giúp người dùng phân tích dữ liệu của họ một cách hiệu quả và chính xác, luôn xác thực đầu vào trước khi xử lý”.</p>
+<p><a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/tools/tools_overview/">Các thông số kỹ thuật của công cụ</a> xác định các ranh giới khả năng và hướng dẫn sử dụng – chúng không chỉ truyền đạt những công cụ nào có sẵn, mà còn cách thức và thời điểm chúng nên được sử dụng. Các mô tả công cụ được thiết kế tốt sẽ trở thành một phần của quá trình suy luận của mô hình. Một mô tả công cụ như “Sử dụng công cụ này cho các phép tính toán học phức tạp đòi hỏi độ chính xác cao” giúp mô hình lựa chọn phù hợp giữa một công cụ máy tính và việc viết mã Python.</p>
+<p><a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/agents/conversation-management/">Lịch sử cuộc trò chuyện</a> duy trì tính liên tục của nhiệm vụ và ngữ cảnh đang phát triển – nó cung cấp các chi tiết cụ thể cho phép các tác nhân duy trì sự mạch lạc qua các tương tác. Khi các cuộc trò chuyện trở nên dài hơn, việc quản lý ngữ cảnh này trở nên quan trọng để duy trì hiệu suất trong khi vẫn giữ lại thông tin liên quan. Quản lý ngữ cảnh rất quan trọng đối với các tác nhân dựa trên mô hình – đó là sự khác biệt giữa một tác nhân duy trì các cuộc trò chuyện mạch lạc, thông minh và một tác nhân mất dấu các chi tiết quan trọng hoặc vượt quá giới hạn mã thông báo. Strands cung cấp một giao diện đơn giản cho phép các nhà phát triển xác định các lời nhắc hệ thống, công cụ và hành vi quản lý ngữ cảnh của tác nhân mà không bị lạc trong sự phức tạp của việc triển khai.</p>
+<p>Các phương pháp tiếp cận cửa sổ trượt giữ lại các tin nhắn gần đây và loại bỏ những tin nhắn cũ hơn: đơn giản và hiệu quả. Các kỹ thuật tóm tắt giữ lại thông tin quan trọng từ các cuộc trò chuyện dài hơn trong giới hạn mã thông báo – tốt hơn cho các cuộc thảo luận phức tạp, đang phát triển. Mục tiêu là cung cấp cho mô hình ngữ cảnh phù hợp nhất để đưa ra quyết định tốt về trường hợp sử dụng cụ thể của bạn.</p>
+<p>Điều này thể hiện một sự thay đổi lớn từ lập trình thủ tục sang lập trình theo ngữ cảnh. Thay vì viết logic &ldquo;nếu thế này, thì thế kia&rdquo;, bạn đang tạo ra ngữ cảnh giúp mô hình tự tìm ra cách tiếp cận tốt nhất.</p>
+<p>from strands import Agent</p>
+<p>from strands_tools import calculator, file_write, python_repl</p>
+<p>Simple: Get started in seconds
+agent = Agent(</p>
+<pre><code>tools=[calculator, file_write, python_repl],
+
+system_prompt=&quot;You are a helpful assistant that can perform calculations and verify them with code.&quot;
+</code></pre>
+<p>)</p>
+<p>The model autonomously decides: calculate first, then verify with code
+agent(&ldquo;Calculate the compound interest on $10,000 at 5% annually for 10 years&rdquo;)</p>
+<p>Triết lý thiết kế này được áp dụng xuyên suốt Strands. Bạn có thể xây dựng các tác nhân phức tạp mà không bị lạc trong việc cấu hình, nhưng mọi khía cạnh vẫn có thể tùy chỉnh khi trường hợp sử dụng của bạn yêu cầu.</p>
+<h2 id="mở-rộng-quy-mô-các-tác-nhân-theo-mô-hình-với-strands"><strong>Mở rộng quy mô các tác nhân theo mô hình với Strands</strong></h2>
+<p>Phương pháp tiếp cận theo mô hình có thể mở rộng một cách tự nhiên trong khi vẫn duy trì trải nghiệm nhà phát triển gọn gàng. Một tác nhân duy nhất được trang bị các công cụ phù hợp có thể xử lý các tác vụ phức tạp mà theo truyền thống sẽ yêu cầu nhiều thành phần chuyên biệt. Khi bạn cần nhiều tác nhân, các mô hình sẽ tự phối hợp với nhau thông qua một số mẫu đã được chứng minh. Strands cung cấp bốn phương pháp tiếp cận chính để phối hợp đa tác nhân, mỗi phương pháp phù hợp với các trường hợp sử dụng khác nhau:</p>
+<ul>
+<li>
+<p><strong>Tác nhân dưới dạng công cụ:</strong> Các hệ thống phân cấp trong đó các chuyên gia đóng vai trò là các công cụ thông minh</p>
+</li>
+<li>
+<p><strong>Bầy đàn:</strong> Hợp tác tự chủ với các nhóm tác nhân tự tổ chức</p>
+</li>
+<li>
+<p><strong>Đồ thị:</strong> Các quy trình công việc có cấu trúc với các đường thực thi xác định</p>
+</li>
+<li>
+<p><strong>Siêu tác nhân:</strong> Các tác nhân động có thể sửa đổi hành vi điều phối của chính chúng</p>
+</li>
+</ul>
+<p>Cho dù bạn đang xây dựng các hệ thống phân cấp đơn giản hay các hệ thống thích ứng phức tạp, Strands vẫn giữ giao diện gọn gàng trong khi cung cấp khả năng cấu hình cần thiết cho các hệ thống sản xuất.</p>
+<h2 id="tác-nhân-dưới-dạng-công-cụ-trí-tuệ-phân-cấp"><strong>Tác nhân dưới dạng công cụ: Trí tuệ phân cấp</strong></h2>
+<p>Khi một tác nhân duy nhất cần chuyên môn chuyên biệt,<a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/multi-agent/agents-as-tools/"> </a><a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/multi-agent/agents-as-tools/">tác nhân dưới dạng công cụ</a> sẽ biến các tác nhân khác thành các công cụ thông minh. Điều này tạo ra các hệ thống phân cấp tự nhiên, nơi một tác nhân điều phối ủy thác cho các chuyên gia, duy trì sự phân chia trách nhiệm rõ ràng trong khi tận dụng phương pháp tiếp cận theo mô hình ở mọi cấp độ. Làm thế nào tác nhân điều phối quyết định nên tham khảo ý kiến của chuyên gia nào? Mô hình suy luận yêu cầu giống như cách nó suy luận về việc lựa chọn công cụ. Khi người dùng hỏi “Lên kế hoạch cho một chuyến công tác đến Tokyo và nghiên cứu cơ hội thị trường ở đó,” tác nhân điều phối nhận ra rằng điều này đòi hỏi cả chuyên môn về lập kế hoạch du lịch và nghiên cứu thị trường. Nó có thể tham khảo ý kiến của cố vấn du lịch trước để hiểu về hậu cần, sau đó sử dụng những ràng buộc đó để hướng dẫn công việc của nhà phân tích nghiên cứu.</p>
+<p>from strands import Agent, tool</p>
+<p>@tool</p>
+<p>def research_analyst(request: str) -&gt; str:</p>
+<pre><code>&quot;&quot;&quot;Research specialist for market analysis&quot;&quot;&quot;
+
+research_agent = Agent(
+
+    system_prompt=&quot;You are a research specialist who gathers and analyzes market information.&quot;,
+
+    tools=[web_search, calculator]
+
+)
+
+return str(research_agent(request))
+</code></pre>
+<p>@tool</p>
+<p>def travel_advisor(request: str) -&gt; str:</p>
+<pre><code>&quot;&quot;&quot;Travel planning specialist for logistics and recommendations&quot;&quot;&quot;
+
+travel_agent = Agent(
+
+    system_prompt=&quot;You are a travel planning specialist who helps with logistics, bookings, and recommendations.&quot;,
+
+    tools=[flight_search, hotel_search, weather_api]
+
+)
+
+return str(travel_agent(request))
+</code></pre>
+<p>Orchestrator decides when to consult specialists and how to synthesize their input
+executive_assistant = Agent(</p>
+<pre><code>system_prompt=&quot;You coordinate with specialists to provide comprehensive assistance.&quot;,
+
+tools=[research_analyst, travel_advisor]
+</code></pre>
+<p>)</p>
+<p>Mô hình điều phối quyết định chuyên gia nào cần tham khảo và cách tổng hợp thông tin đầu vào của họ – không cần quy trình làm việc được xác định trước. Mô hình này hoạt động tốt khi bạn cần ranh giới chuyên môn rõ ràng và muốn các mô hình ủy quyền với một tác nhân chính dẫn đầu.</p>
+<h2 id="swarms-hợp-tác-tự-động"><strong>Swarms: Hợp tác tự động</strong></h2>
+<p><a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/multi-agent/swarm/">Swarms</a> cho phép các tác nhân hợp tác tự trị theo cách tự tổ chức, quyết định khi nào chuyển giao nhiệm vụ cho nhau. Điều này hoạt động tốt cho việc hợp tác sáng tạo và giải quyết vấn đề theo cách phát sinh, nơi nhiều quan điểm khác nhau tạo thêm giá trị.</p>
+<p>Hãy xem xét một dự án nghiên cứu thị trường nơi bạn cần phân tích một cơ hội sản phẩm mới. Một phương pháp truyền thống có thể tuân theo một trình tự cứng nhắc: nghiên cứu → phân tích → viết. Nhưng nghiên cứu thực tế lộn xộn hơn – bạn có thể phát hiện ra trong quá trình phân tích rằng bạn cần dữ liệu bổ sung, hoặc nhận ra trong khi viết rằng một khung phân tích khác sẽ hấp dẫn hơn.</p>
+<p>from strands import Agent</p>
+<p>from strands.multiagent import Swarm</p>
+<p>researcher = Agent(name=&ldquo;researcher&rdquo;, system_prompt=&ldquo;You research topics thoroughly&hellip;&rdquo;)</p>
+<p>analyst = Agent(name=&ldquo;analyst&rdquo;, system_prompt=&ldquo;You analyze data and create insights&hellip;&rdquo;)</p>
+<p>writer = Agent(name=&ldquo;writer&rdquo;, system_prompt=&ldquo;You write comprehensive reports&hellip;&rdquo;)</p>
+<p>Agents coordinate autonomously through model-driven handoffs
+market_research_team = Swarm([researcher, analyst, writer])</p>
+<p>Trong một bầy đàn, nhà nghiên cứu có thể bắt đầu thu thập thông tin, sau đó chuyển giao cho nhà phân tích khi họ đã tìm thấy những mẫu thú vị. Nhà phân tích có thể phát hiện ra những lỗ hổng và chuyển lại cho nhà nghiên cứu để có thêm dữ liệu cụ thể. Người viết có thể tham gia vào cuộc trò chuyện từ sớm để giúp định hình hướng nghiên cứu dựa trên những gì sẽ tạo nên một câu chuyện hấp dẫn.</p>
+<p>Sự khác biệt chính so với các tác nhân dưới dạng công cụ là ngữ cảnh được chia sẻ. Trong các hệ thống phân cấp, người điều phối quyết định thông tin nào sẽ được chuyển giữa các chuyên gia. Trong các bầy đàn, tất cả các tác nhân đều có quyền truy cập vào cùng một lịch sử cuộc trò chuyện, cho phép hợp tác linh hoạt hơn và các hướng dẫn cấp cao. Bạn có thể nói với một bầy đàn “hãy nghiên cứu cơ hội thị trường này” mà không cần chỉ định chính xác công việc nên được phân chia như thế nào – các tác nhân sẽ tự tìm ra dựa trên sự hiểu biết chung của chúng về nhiệm vụ đang phát triển.</p>
+<p>Bầy đàn đánh đổi việc thực thi có thể dự đoán được để lấy các khả năng mới nổi, khiến chúng trở nên lý tưởng cho các nhiệm vụ nghiên cứu phức tạp, các tình huống động não và các dự án sáng tạo mà cách tiếp cận tốt nhất không rõ ràng ngay từ đầu.</p>
+<h2 id="đồ-thị-quy-trình-làm-việc-có-cấu-trúc"><strong>Đồ thị: Quy trình làm việc có cấu trúc</strong></h2>
+<p><a href="https://strandsagents.com/latest/documentation/docs/user-guide/concepts/multi-agent/graph/">Đồ thị</a> cung cấp các quy trình làm việc xác định trong đó việc thực thi tuân theo các đường dẫn được xác định trước. Trong khi các tác nhân riêng lẻ trong đồ thị sử dụng thực thi theo mô hình, cấu trúc đồ thị đảm bảo các trình tự và sự phụ thuộc cụ thể được duy trì.</p>
+<p>Mô hình này vượt trội cho các quy trình kinh doanh yêu cầu các điểm kiểm tra bắt buộc hoặc các yêu cầu tuân thủ. Ví dụ, một quy trình phân tích tài chính có thể yêu cầu nghiên cứu → đánh giá rủi ro → xem xét quy định → đề xuất cuối cùng, với mỗi bước xây dựng trên bước trước đó và một số bước yêu cầu phê duyệt cụ thể.</p>
+<p>from strands import Agent</p>
+<p>from strands.multiagent import GraphBuilder</p>
+<p>builder = GraphBuilder()</p>
+<p>builder.add_node(researcher, &ldquo;research&rdquo;)</p>
+<p>builder.add_node(analyst, &ldquo;analysis&rdquo;)</p>
+<p>builder.add_node(writer, &ldquo;report&rdquo;)</p>
+<p>builder.add_edge(&ldquo;research&rdquo;, &ldquo;analysis&rdquo;)</p>
+<p>builder.add_edge(&ldquo;analysis&rdquo;, &ldquo;report&rdquo;)</p>
+<p>graph = builder.build()</p>
+<p>Các nhóm AWS đã sử dụng đồ thị để điều phối đường ống dữ liệu, nơi một số phép biến đổi nhất định phải diễn ra theo trình tự, và cho các quy trình tuân thủ, nơi các dấu vết kiểm toán yêu cầu tài liệu từng bước cụ thể. Phương pháp tiếp cận theo mô hình vẫn được áp dụng trong mỗi nút – tác nhân nghiên cứu có thể điều chỉnh phương pháp của mình dựa trên những gì nó khám phá – nhưng luồng tổng thể vẫn có thể dự đoán được.</p>
+<p>Hạn chế của đồ thị là sự cứng nhắc của chúng. Nếu nhà phân tích phát hiện ra họ cần nghiên cứu bổ sung, họ không thể yêu cầu trực tiếp – quy trình làm việc sẽ cần phải hoàn thành và có khả năng khởi động lại. Điều này làm cho đồ thị trở nên lý tưởng cho các quy trình đã được hiểu rõ nhưng ít phù hợp hơn cho công việc khám phá hoặc sáng tạo.</p>
+<h2 id="siêu-tác-nhân-điều-phối-linh-hoạt"><strong>Siêu tác nhân: Điều phối linh hoạt</strong></h2>
+<p>Siêu tác nhân là các tác nhân đơn lẻ được trang bị các công cụ cho phép chúng suy nghĩ về việc suy nghĩ – chúng có thể tự động tạo ra các tác nhân khác, điều phối các quy trình công việc và tham gia vào việc giải quyết vấn đề đệ quy. Chúng đại diện cho biểu hiện cuối cùng của phương pháp tiếp cận theo mô hình: các tác nhân có thể tự kiến trúc các kỹ thuật điều phối của riêng mình.</p>
+<p>Hãy nghĩ về một siêu tác nhân như một kiến trúc sư cấp cao không chỉ có thể giải quyết vấn đề mà còn có thể quyết định cách cấu trúc phương pháp giải quyết vấn đề. Khi đối mặt với một thách thức phức tạp, nó có thể suy luận: “Điều này đòi hỏi cả nghiên cứu sâu và tổng hợp sáng tạo. Tôi nên tạo ra một bầy đàn các chuyên gia và sau đó sử dụng một biểu đồ để đảm bảo sản phẩm cuối cùng đáp ứng các tiêu chuẩn chất lượng.”</p>
+<p>from strands import Agent</p>
+<p>from strands_tools import graph, swarm, use_agent, think, workflow</p>
+<p>meta_agent = Agent(</p>
+<pre><code>system_prompt=&quot;You can dynamically create specialized agents and orchestrate complex workflows.&quot;,
+
+tools=[graph, swarm, use_agent, think, workflow]
+</code></pre>
+<p>)</p>
+<p>Siêu tác nhân vượt trội trong các hệ thống động phát triển theo thời gian. Lợi ích chính là mức độ năng động bổ sung của chúng – chúng có thể tạo ra các tác nhân không được xác định trước, phát triển các công cụ mới cho các nhu cầu mới nổi, điều chỉnh các chiến lược điều phối của chúng dựa trên các điều kiện thay đổi và phát triển phương pháp giải quyết vấn đề của chúng khi chúng tìm hiểu thêm về lĩnh vực đó.</p>
+<p>Không giống như các mẫu khác mà bạn xác định trước các tác nhân và công cụ, các siêu tác nhân có thể tạo ra các chuyên gia mới và tạo các công cụ tùy chỉnh theo yêu cầu. Phân tích một xu hướng công nghệ mới? Siêu tác nhân có thể tạo ra các chuyên gia về lĩnh vực cho các tác động pháp lý, động lực thị trường và tính khả thi kỹ thuật – các tác nhân không tồn tại cho đến khi nhu cầu cụ thể phát sinh. Nó cũng có thể phát triển các công cụ chuyên dụng để thu thập dữ liệu, các khung phân tích hoặc các định dạng báo cáo phù hợp với lĩnh vực cụ thể đó.</p>
+<p>Việc tạo tác nhân và công cụ động này cho phép các hệ thống phát triển và thích ứng thay vì tuân theo các mẫu cố định.</p>
+<h2 id="xây-dựng-niềm-tin-thông-qua-đánh-giá"><strong>Xây dựng niềm tin thông qua đánh giá</strong></h2>
+<p>Phương pháp tiếp cận theo mô hình đòi hỏi<a href="https://strandsagents.com/latest/documentation/docs/user-guide/observability-evaluation/evaluation/"> </a><a href="https://strandsagents.com/latest/documentation/docs/user-guide/observability-evaluation/evaluation/">đánh giá</a> mạnh mẽ để xây dựng niềm tin rằng các tác nhân đang hoạt động như mong đợi, đặc biệt là khi chúng đang đưa ra các quyết định tự chủ về việc sử dụng công cụ và điều phối tác vụ.</p>
+<p>Vì các tác nhân theo mô hình đưa ra các quyết định động thay vì tuân theo các đường dẫn được xác định trước, việc đánh giá trở nên quan trọng hơn và cũng tinh tế hơn. Bạn cần đánh giá không chỉ liệu tác nhân có đưa ra câu trả lời đúng hay không, mà còn liệu nó có đưa ra các quyết định tốt về cách tiếp cận vấn đề hay không.</p>
+<p>Phương pháp tiếp cận theo mô hình đã thay đổi cách chúng ta nghĩ về bản thân việc đánh giá. Việc kiểm thử truyền thống với các bộ dữ liệu tĩnh trở nên không đủ khi các tác nhân điều chỉnh hành vi của chúng một cách linh hoạt. Sự thay đổi này đòi hỏi các mô hình đánh giá mới phù hợp với trí thông minh của các hệ thống đang được thử nghiệm.</p>
+<p><strong>Các giám khảo LLM</strong> cung cấp một phương pháp mạnh mẽ để đánh giá các phản hồi của tác nhân trên quy mô lớn, nhưng chúng phải được hiệu chỉnh cẩn thận để phù hợp với mong đợi của người dùng cuối. Một giám khảo LLM ưu tiên độ chính xác kỹ thuật có thể bỏ qua các sắc thái quan trọng đối với người dùng thực tế, chẳng hạn như giọng điệu, tính hữu ích hoặc khả năng áp dụng thực tế.</p>
+<p><strong>Người dùng mô phỏng được điều khiển bởi LLM</strong> cho phép thử nghiệm động với các bộ dữ liệu đang phát triển, tạo ra các mẫu tương tác thực tế mà các trường hợp thử nghiệm tĩnh không thể nắm bắt được. Tuy nhiên, những người dùng mô phỏng này cũng phải được hiệu chỉnh để hành xử giống như người dùng cuối thực tế thay vì các kịch bản thử nghiệm lý tưởng hóa. Mục tiêu là hành vi người dùng đích thực, không phải hành vi người dùng hoàn hảo.</p>
+<p>Các khía cạnh đánh giá chính cho các tác nhân theo mô hình bao gồm:</p>
+<ul>
+<li>
+<p><strong>Sự phù hợp của việc lựa chọn công cụ</strong> – Tác nhân có chọn đúng công cụ cho nhiệm vụ không?</p>
+</li>
+<li>
+<p><strong>Chất lượng suy luận</strong> – Cách tiếp cận của tác nhân có hợp lý không?</p>
+</li>
+<li>
+<p><strong>Khả năng thích ứng</strong> – Tác nhân xử lý các tình huống bất ngờ tốt đến mức nào?</p>
+</li>
+<li>
+<p><strong>Hiệu quả</strong> – Tác nhân có hoàn thành nhiệm vụ mà không có các bước không cần thiết không?</p>
+</li>
+</ul>
+<p>Bản chất không xác định của các tác nhân dựa trên mô hình có nghĩa là bạn cần các đường cơ sở có ý nghĩa thống kê và đánh giá liên tục để theo dõi hiệu suất theo thời gian. Sự đầu tư vào việc đánh giá này cho phép bạn tự tin triển khai các tác nhân đưa ra quyết định tự chủ.</p>
+<h2 id="sự-thay-đổi-mô-hình-từ-kiểm-soát-cứng-nhắc-đến-thích-ứng-động"><strong>Sự thay đổi mô hình: Từ kiểm soát cứng nhắc đến thích ứng động</strong></h2>
+<p>Phương pháp tiếp cận theo mô hình đại diện cho một sự thay đổi cơ bản trong cách chúng ta nghĩ về các tác nhân AI. Thay vì cố gắng kiểm soát mọi khía cạnh của hành vi tác nhân thông qua việc điều phối phức tạp, chúng tôi cung cấp các công cụ, bối cảnh và mục tiêu phù hợp, sau đó để mô hình tự xác định cách tiếp cận tốt nhất một cách linh hoạt.</p>
+<p>Sự thay đổi này giải quyết một vấn đề cốt lõi: logic được xác định trước gặp khó khăn trong việc xử lý một thế giới không thể đoán trước. Các khung truyền thống bị phá vỡ khi người dùng đặt câu hỏi theo những cách không ngờ tới, khi API trả về các phản hồi không mong muốn hoặc khi các yêu cầu kinh doanh thay đổi. Chúng thất bại vì chúng chỉ có thể xử lý các tình huống mà các nhà phát triển đã lường trước và lập trình.</p>
+<p>Các tác nhân theo mô hình có thể thích ứng. Khi một lệnh gọi API không thành công, chúng sẽ suy luận về các giải pháp thay thế. Khi người dùng hỏi điều gì đó bất ngờ, chúng sẽ tìm cách giúp đỡ bằng cách sử dụng các công cụ có sẵn. Khi các yêu cầu thay đổi, chúng sẽ điều chỉnh cách tiếp cận của mình mà không cần thay đổi mã. Khả năng thích ứng này đến từ việc tận dụng khả năng suy luận của mô hình thay vì chống lại chúng.</p>
+<p>Cách tiếp cận được áp dụng trong Strands cho phép các tác nhân xử lý các yêu cầu và dữ liệu thay đổi trong khi giảm bớt sự phức tạp mà các nhà phát triển cần quản lý. Bạn có thể có cả hai: sự đơn giản để bắt đầu nhanh chóng và sức mạnh để cấu hình mọi thứ khi sản xuất yêu cầu.</p>
+<p>Phương pháp tiếp cận theo mô hình không phải là về việc xây dựng các khung điều phối tốt hơn. Đó là về việc nhận ra rằng các LLM hiện đại đã phát triển vượt xa sự cần thiết của sự hướng dẫn cứng nhắc như vậy. Bằng cách tận dụng khả năng suy luận của mô hình để điều phối, chúng ta có thể xây dựng các tác nhân vừa có khả năng hơn vừa dễ phát triển hơn. Triết lý này là nền tảng mà mọi thứ khác trong Strands được xây dựng dựa trên đó. Hãy truy cập trang web<a href="https://strandsagents.com/latest/"> </a><a href="https://strandsagents.com/latest/">Strands Agents</a> để dùng thử ngay hôm nay.</p>
+<p><em>Tìm kiếm thêm nội dung mã nguồn mở? Hãy chắc chắn theo dõi <a href="https://www.linkedin.com/company/awsopen/posts/?feedView=all">AWS Open Source</a> trên LinkedIn!</em></p>
+<p><img src="../../../images/Blog/blog3/E015GUGD2V6-W0187GVFRG8-98d371d2068f-512.jpg" alt="Enter image alt description"></p>
+<h3 id="arron-bailiss"><strong>Arron Bailiss</strong></h3>
+<p>Arron Bailiss là một Kỹ sư chính tập trung vào agent AI tại AWS, làm việc đa lĩnh vực của trí tuệ nhân tạo, học máy và robot. Anh ấy giúp định hình tương lai của các công cụ dành cho nhà phát triển cho phép các nhà xây dựng tạo ra các ứng dụng phức tạp dựa trên AI.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../../vi/3-blogstranslated/3.2-blog2/" title="Blog 2: Xây dựng Các Agents AI Thế hệ tiếp theo"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../../vi/4-eventparticipated/" title="Các events đã tham gia" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1765299735"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1765299735"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1765299735"></script>
+    <script src="../../../js/jquery.sticky.js?1765299735"></script>
+    <script src="../../../js/featherlight.min.js?1765299735"></script>
+    <script src="../../../js/highlight.pack.js?1765299735"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1765299735"></script>
+    <script src="../../../js/learn.js?1765299735"></script>
+    <script src="../../../js/hugo-learn.js?1765299735"></script>
+
+    <link href="../../../mermaid/mermaid.css?1765299735" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1765299735"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
