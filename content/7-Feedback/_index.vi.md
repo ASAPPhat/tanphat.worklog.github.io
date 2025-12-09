@@ -26,7 +26,7 @@ Trong quá trình thực tập, tôi học được nhiều kỹ năng mới nh�
 Các admin và Mentor luôn vui vẻ trò chuyện với tôi từ các vấn đề xung quanh đến chuyên môn, được chia sẻ về câu chuyện việc làm, các kiến thức thông qua các buổi workshop. Có những sai lầm lúc đầu gặp phải, tôi được nhắc nhở về thiếu sót hay nhầm lẫn trong kiến thức, từ đó rút kinh nghiệm.
 
 **6. Chính sách / phúc lợi cho thực tập sinh**  
-_(Chưa có bình luận)_
+Công ty ưu tiên sự thoải mái và năng suất của các thực tập sinh bằng cách cung cấp một khu vực làm việc rộng rãi và có điều kiện tốt, đáp ứng các tiêu chuẩn hoạt động cao. Cam kết về một môi trường vật chất xuất sắc này còn đi đôi với việc chú trọng đến sự linh hoạt trong phát triển nghề nghiệp. Cụ thể, chương trình thực tập có một lịch trình làm việc cực kỳ linh hoạt, mang lại cho thực tập sinh quyền tự chủ để cân bằng kinh nghiệm chuyên môn với các cam kết khác. Sự kết hợp giữa không gian làm việc ưu việt và giờ giấc linh hoạt này đảm bảo một trải nghiệm hỗ trợ và tích cực.
 
 ---
 

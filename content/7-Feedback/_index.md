@@ -26,7 +26,7 @@ During the internship, I learned many new skills such as using project managemen
 The admin and mentors are always cheerful and willing to chat with me about various topics from general matters to technical subjects. I'm also exposed to work stories and knowledge through workshops. When I made mistakes at first, I was reminded of shortcomings or misconceptions in my knowledge, helping me gain experience.
 
 **6. Internship Policies / Benefits**  
-_(No comments)_
+The company prioritizes the comfort and productivity of its interns by providing a generous and well-conditioned working area that meets high operational standards. This commitment to an excellent physical environment is matched by a dedication to flexibility in professional development. Specifically, the internship program features a highly adaptable working schedule, giving interns the autonomy to balance their professional experience with other commitments. This combination of superior workspace and flexible hours ensures a supportive and positive experience.
 
 ---
 
