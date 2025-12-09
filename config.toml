@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://asapphat.github.io/tanphat.worklog.github.io/"
 relativeURLs = true
 canonifyURLs = true
 
