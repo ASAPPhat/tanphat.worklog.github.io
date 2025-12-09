@@ -6,90 +6,100 @@ chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
+**Khoảng thời gian tuần: 22 - 28 tháng 9, 2025**
 
 ### Mục tiêu tuần 3:
 
-* Khám phá và hiểu các khái niệm cơ bản về VPC (Virtual Private Cloud)
-* Học các kiến thức cơ bản về dịch vụ EC2 và thực hành triển khai
-* Triển khai website tĩnh sử dụng S3 và EC2
-* Thực hành vẽ sơ đồ kiến trúc AWS với draw.io
-* Hiểu các chiến lược tối ưu hóa chi phí trong AWS
+- Khám phá và hiểu các khái niệm cơ bản về VPC (Virtual Private Cloud)
+- Học các kiến thức cơ bản về dịch vụ EC2 và thực hành triển khai
+- Triển khai website tĩnh sử dụng S3 và EC2
+- Thực hành vẽ sơ đồ kiến trúc AWS với draw.io
+- Hiểu các chiến lược tối ưu hóa chi phí trong AWS
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Khám phá các khái niệm và kiến trúc VPC <br> - Thực hành mở và cấu hình VPC instances <br> - Học vẽ sơ đồ kiến trúc AWS sử dụng draw.io                                                  | 22/09/2025   | 22/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 2   | - Thử phát triển ứng dụng website tĩnh sử dụng Kiro AI <br> - Khắc phục các vấn đề triển khai <br> - Học về việc xác định yêu cầu rõ ràng cho phát triển hỗ trợ bởi AI                      | 23/09/2025   | 23/09/2025      |                                           |
-| 3   | - Thực hành tích hợp VPC với S3 <br> - Triển khai website tĩnh đơn giản sử dụng S3 <br> - Cấu hình S3 bucket để host website tĩnh                                                          | 24/09/2025   | 24/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Cấu hình EC2 instance để host server <br> - Khám phá chức năng và tính năng của dịch vụ EC2 <br> - Tìm hiểu các chiến lược tối ưu hóa chi phí AWS <br> - Demo khả năng của dịch vụ EC2   | 25/09/2025   | 25/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Ôn tập các nguyên tắc Quản lý Chi phí AWS <br> - Xem lại các module S3, VPC và EC2 <br> - Kiểm tra triển khai và chức năng của website tĩnh                                               | 26/09/2025   | 26/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - Thực hành vẽ sơ đồ kiến trúc AWS với draw.io <br> - Xem video khóa học AWS Study Group trên YouTube <br> - Củng cố kiến thức đã học trong tuần                                            | 27/09/2025   | 27/09/2025      | Kênh YouTube AWS Study Group              |
 
+| Thứ       | Công việc                                 | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                       |
+| --------- | ----------------------------------------- | ------------ | --------------- | ------------------------------------ |
+| Monday    | - **Giới thiệu S3**                       | 22/09/2025   | 22/09/2025      | https://000057.awsstudygroup.com/    |
+| Tuesday   | - **File Storage Gateway:**               | 23/09/2025   | 23/09/2025      | https://000024.awsstudygroup.com/    |
+| Wednesday | - **VM Import/Export**                    | 24/09/2025   | 24/09/2025      | https://000014.awsstudygroup.com/vi/ |
+| Thursday  | - **WorkFlow cho project:**               | 25/09/2025   | 25/09/2025      | Project Templates                    |
+| Friday    | - **Dùng AI Gen + check Data version 1:** | 26/09/2025   | 29/09/2025      | Project Guidelines                   |
 
 ### Kết quả đạt được tuần 3:
 
-* **Kiến thức cơ bản về VPC:**
-  * Hiểu kiến trúc VPC và các khái niệm cốt lõi
-  * Cấu hình thành công các VPC instances
-  * Học cấu hình mạng VPC và security groups
-  * Thực hành tích hợp VPC với các dịch vụ AWS khác
+- **Hoàn thành Lab 57 - Giới thiệu S3:**
 
-* **Thành thạo dịch vụ EC2:**
-  * Có kinh nghiệm thực tế với triển khai EC2 instance
-  * Khám phá các loại và cấu hình EC2 instance
-  * Học các phương pháp kết nối và quản lý EC2
-  * Hiểu tích hợp EC2 với VPC
+  - Thành thạo tạo và cấu hình S3 buckets
+  - Học quản lý S3 objects và storage classes
+  - Hiểu S3 access control và permissions
+  - Khám phá khả năng hosting website tĩnh trên S3
+  - Đạt được kinh nghiệm thực tế với S3 lifecycle policies
 
-* **Triển khai Website Tĩnh:**
-  * Triển khai thành công website tĩnh sử dụng S3
-  * Cấu hình S3 bucket để host website
-  * Tích hợp S3 với EC2 để host server
-  * Kiểm tra chức năng và khả năng truy cập của website
+- **Hoàn thành Lab 24 - File Storage Gateway:**
 
-* **Vẽ Sơ đồ Kiến trúc AWS:**
-  * Học sử dụng draw.io để vẽ sơ đồ kiến trúc AWS
-  * Thực hành tạo sơ đồ hạ tầng AWS chuyên nghiệp
-  * Ghi chép cấu hình VPC và EC2 bằng hình ảnh
+  - Cấu hình AWS Storage Gateway cho hybrid storage
+  - Kết nối storage on-premises với AWS cloud
+  - Học file interface và caching mechanisms
+  - Bật chuyển dữ liệu liền mạch giữa on-premises và cloud
+  - Hiểu các chiến lược tối ưu hóa storage
 
-* **Tối ưu hóa Chi phí:**
-  * Khám phá các chiến lược quản lý chi phí AWS
-  * Học các phương pháp giảm chi phí dịch vụ AWS
-  * Hiểu các công cụ thanh toán và giám sát chi phí
+- **Hoàn thành Lab 14 - VM Import/Export:**
 
-* **Kiểm soát Phiên bản và Công cụ AI:**
-  * Khám phá các thực hành kiểm soát phiên bản Git
-  * Có kinh nghiệm với khả năng và hạn chế của Kiro AI
-  * Học tầm quan trọng của yêu cầu rõ ràng cho phát triển hỗ trợ bởi AI
+  - Thành công nhập các máy ảo vào AWS
+  - Chuyển đổi on-premises VMs thành EC2 instances
+  - Học các phương pháp hay nhất migration VM
+  - Cấu hình các quy trình xuất VM
+  - Đạt được kinh nghiệm với hiện đại hóa cơ sở hạ tầng
 
-### Thách thức gặp phải:
+- **Thiết kế Quy trình làm việc Dự án:**
 
-* **Vấn đề Triển khai Kiro AI:**
-  * Gặp phải các vấn đề nghiêm trọng về code bị hỏng và hallucination khi sử dụng Kiro AI
-  * Dành 2-3 ngày để debug code bị hỏng
-  * Nguyên nhân gốc rễ: Yêu cầu không rõ ràng và thiếu chi tiết cho phép AI đưa ra các giả định sai
-  * Bài học rút ra: Công cụ AI yêu cầu các yêu cầu chính xác, được định nghĩa rõ ràng để tạo ra code đáng tin cậy
-  * Quyết định: Xóa repository bị hỏng và bắt đầu lại với cách tiếp cận rõ ràng hơn
+  - Tạo tài liệu quy trình làm việc dự án toàn diện
+  - Lập kế hoạch các giai đoạn triển khai và cột mốc dự án
+  - Định nghĩa pipeline xử lý dữ liệu rõ ràng
+  - Thiết lập khung governance dự án
+  - Tài liệu hóa vai trò và trách nhiệm
 
-* **Xác định Yêu cầu:**
-  * Học được rằng yêu cầu chi tiết là quan trọng cho phát triển hỗ trợ bởi AI thành công
-  * Hiểu khoảng cách giữa hướng dẫn chung và nhu cầu triển khai cụ thể
-  * Cải thiện khả năng viết yêu cầu rõ ràng, có thể thực hiện được
+- **Tạo và Xác minh Dữ liệu bằng AI:**
 
-### Kiến thức chính:
+  - Tạo dữ liệu tổng hợp bằng công cụ AI generation
+  - Xác minh chất lượng dữ liệu và tuân thủ định dạng
+  - Kiểm tra tính toàn vẹn và nhất quán dữ liệu phiên bản 1
+  - Tạo bộ dữ liệu làm việc cho phát triển dự án
+  - Xác thực schema dữ liệu và cấu trúc
 
-* VPC là nền tảng cho kiến trúc mạng và bảo mật AWS
-* EC2 cung cấp khả năng tính toán linh hoạt với nhiều loại và cấu hình instance khác nhau
-* S3 có thể host website tĩnh hiệu quả với cấu hình phù hợp
-* Tích hợp giữa VPC, EC2 và S3 cho phép kiến trúc ứng dụng mạnh mẽ
-* Tối ưu hóa chi phí là quan trọng cho việc sử dụng AWS bền vững
-* Yêu cầu rõ ràng, chi tiết là cần thiết cho phát triển hỗ trợ bởi AI thành công
-* Thực hành kiểm soát phiên bản giúp quản lý thay đổi code và thử nghiệm
+- **Hiểu biết về Dịch vụ Lưu trữ:**
+
+  - S3 cho các giải pháp lưu trữ object có khả năng mở rộng
+  - Storage Gateway cho kiến trúc lưu trữ hybrid
+  - VM migration cho chuyển đổi cơ sở hạ tầng
+  - Tối ưu hóa lưu trữ và quản lý chi phí
+  - Chiến lược bảo vệ và sẵn sàng dữ liệu
+
+- **Nền tảng Dự án Được Thiết lập:**
+
+  - Lựa chọn và xác minh dataset dự án toàn diện
+  - Thiết kế kiến trúc dự án và quy trình làm việc
+  - Thiết lập khung hợp tác nhóm dự án
+  - Sẵn sàng cho các giai đoạn phát triển và triển khai
+
+- **Năng lực Kỹ thuật Được Phát triển:**
+
+  - Tích hợp dịch vụ lưu trữ AWS nâng cao
+  - Thiết kế quy trình làm việc và lập kế hoạch dự án
+  - Tạo dữ liệu và ứng dụng công cụ AI
+  - Kỹ thuật migration cơ sở hạ tầng
+  - Thiết kế kiến trúc cloud hybrid
+
+- **Chuẩn bị cho Giai đoạn Tiếp theo:**
+  - Hoàn thành nền tảng dịch vụ lưu trữ
+  - Thiết lập quy trình xử lý dữ liệu
+  - Sẵn sàng cho các chủ đề AWS nâng cao và phát triển dự án
+  - Tạo nền tảng vững chắc cho các giải pháp dữ liệu có khả năng mở rộng
 
 ### Mục tiêu tuần tới:
 
-* Tiếp tục khám phá các dịch vụ AWS và tích hợp của chúng
-* Áp dụng bài học về xác định yêu cầu
-* Thực hành các mẫu kiến trúc AWS phức tạp hơn
-* Cải thiện các chiến lược tối ưu hóa chi phí
-
-
+- Tiếp tục khám phá các dịch vụ AWS và tích hợp của chúng
+- Áp dụng bài học về xác định yêu cầu
+- Thực hành các mẫu kiến trúc AWS phức tạp hơn
+- Cải thiện các chiến lược tối ưu hóa chi phí

@@ -6,81 +6,94 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
+**Week Duration: September 8 - 14, 2025**
+
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Set up development environment and understand FCJ program workflows.
-* Create AWS Free Tier account and explore core AWS services.
-* Establish documentation workflow for the internship journey.
+- Connect and get acquainted with members of First Cloud Journey.
+- Set up development environment and understand FCJ program workflows.
+- Create AWS Free Tier account and explore core AWS services.
+- Establish documentation workflow for the internship journey.
 
 ### Tasks to be carried out this week:
 
-| Day | Task                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
-| 1   | - Get familiarized with FCJ members <br> - Understand FCJ program workflows and rules <br> - Initial onboarding and orientation                                                        | 09/08/2025 | 09/08/2025      |                                           |
-| 2   | - Install Linux Fedora KDE Plasma 42 <br> - Learn basic Linux setup and configuration <br> - Troubleshoot installation issues                                                         | 09/09/2025 | 09/09/2025      |                                           |
-| 3   | - Create AWS Free Tier account <br> - Explore AWS Free Tier services <br> - Complete tasks to obtain $200 AWS credit                                                                  | 09/10/2025 | 09/10/2025      | <https://aws.amazon.com/free/>            |
-| 4   | - Continue AWS Free Tier exploration <br> - Review available services: EC2, RDS, Lambda, VPC <br> - Understand service limits and free tier constraints                               | 09/11/2025 | 09/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Explore S3 buckets and storage options <br> - Learn AWS Budget management <br> - Set up daily and monthly budget alerts <br> - Continue Linux troubleshooting                       | 09/12/2025 | 09/12/2025      | <https://aws.amazon.com/s3/>              |
-| 6   | - Finalize budget configurations <br> - Review Billing & Cost Management dashboard <br> - Complete Linux installation troubleshooting <br> - Set up GitHub repos for documentation     | 09/13/2025 | 09/13/2025      |                                           |
+| Day       | Task                                                                                                | Start Date | Completion Date | Reference Material                                                                         |
+| --------- | --------------------------------------------------------------------------------------------------- | ---------- | --------------- | ------------------------------------------------------------------------------------------ |
+| Monday    | - **Start Module 1:** <br> - **Lab 1 Setting up AWS Account:**                                      | 09/08/2025 | 09/08/2025      | https://youtu.be/HxYZAK1coOI?si=QzTgLWe-kpZEJ4m8 <br> https://000001.awsstudygroup.com/vi/ |
+| Tuesday   | - **Lab 7 Cost Management with AWS Account:** <br> - **Lab 9 Request Support with Amazon Support:** | 09/09/2025 | 09/09/2025      | https://000007.awsstudygroup.com/ <br> https://000009.awsstudygroup.com/                   |
+| Wednesday | - **Module 2 Theory:**                                                                              | 09/10/2025 | 09/10/2025      | https://youtu.be/O9Ac_vGHquM?si=NX9x5PJxBIFDO4dL                                           |
+| Thursday  | - **Lab 3: Amazon VPC and AWS Site-to-Site VPN Workshop**                                           | 09/11/2025 | 09/14/2025      | https://000003.awsstudygroup.com/                                                          |
+| Friday    | - Finalize lab exercises                                                                            | 09/12/2025 | 09/12/2025      | AWS Labs Documentation                                                                     |
+| Saturday  | - Finalize lab exercises and consolidate learnings                                                  | 09/13/2025 | 09/13/2025      | AWS Workshop Materials                                                                     |
 
 ### Week 1 Achievements:
 
-* Successfully integrated with the First Cloud Journey team and understood the program structure, workflows, and expectations.
+- **Completed Module 1 - AWS Foundation:**
 
-* Installed and configured Linux Fedora KDE Plasma 42 as the primary development environment:
-  * Completed basic Linux setup
-  * Resolved installation and configuration issues
-  * Familiarized with KDE Plasma desktop environment
+  - Successfully completed Module 1 theory and fundamentals
+  - Understood AWS cloud infrastructure basics
+  - Learned core AWS concepts and terminology
+  - Established foundation for advanced AWS topics
 
-* Created and configured AWS Free Tier account:
-  * Successfully registered for AWS Free Tier
-  * Completed required tasks to obtain $200 in AWS credits
-  * Explored available free tier services
+- **Completed Lab 1 - Setting up AWS Account:**
 
-* Gained hands-on experience with core AWS services:
-  * **EC2** - Elastic Compute Cloud for virtual servers
-  * **RDS** - Relational Database Service
-  * **Lambda** - Serverless compute service
-  * **VPC** - Virtual Private Cloud networking
-  * **S3** - Simple Storage Service for object storage
+  - Created AWS Free Tier account successfully
+  - Configured AWS management console
+  - Set up initial security settings and access keys
+  - Understood AWS billing and cost management basics
 
-* Implemented AWS cost management best practices:
-  * Set up AWS Budgets for cost monitoring
-  * Configured daily budget alerts
-  * Configured monthly budget thresholds
-  * Explored Billing & Cost Management dashboard
+- **Completed Lab 7 - Cost Management with AWS Account:**
 
-* Established documentation workflow:
-  * Created GitHub repositories for AWS FCJ journey documentation
-  * Set up templates for efficient worklog management
-  * Organized project structure for ongoing documentation
+  - Learned AWS cost management strategies
+  - Configured billing alerts and notifications
+  - Understood cost optimization principles
+  - Practiced budget tracking and forecasting
 
-* Acquired foundational knowledge:
-  * Basic AWS account management and navigation
-  * FCJ program rules and operational workflows
-  * Linux system administration basics
-  * Cost optimization strategies for cloud resources
+- **Completed Lab 9 - Request Support with Amazon Support:**
 
-![AWS Free Tier Dashboard](/images/week1/aws-freetier-dashboard.png)
-*AWS Free Tier services overview*
+  - Learned AWS support plans and options
+  - Understood support case management
+  - Practiced creating and tracking support tickets
+  - Gained knowledge of AWS Support resources
 
-![Budget Configuration](/images/week1/budget-setup.png)
-*Daily and monthly budget alerts configuration*
+- **Completed Module 2 - Advanced AWS Concepts:**
 
-### Challenges Faced:
+  - Mastered advanced AWS infrastructure concepts
+  - Deepened understanding of AWS architecture patterns
+  - Built upon Module 1 foundational knowledge
+  - Prepared for hands-on lab exercises
 
-* Minor Linux installation issues that required troubleshooting and configuration adjustments.
-* Initial learning curve with AWS console navigation and service discovery.
+- **Completed Lab 3 - Amazon VPC and AWS Site-to-Site VPN Workshop:**
 
-### Key Learnings:
+  - Successfully set up Virtual Private Cloud (VPC)
+  - Configured VPC subnets and routing
+  - Established Site-to-Site VPN connections
+  - Practiced hybrid network connectivity
+  - Understood VPC security groups and network ACLs
 
-* Understanding the importance of cost management from day one in cloud environments.
-* The value of proper documentation and workflow templates for long-term project success.
-* Basic Linux system administration skills are essential for cloud computing work.
+- **Key Technical Skills Acquired:**
+
+  - AWS account setup and configuration
+  - AWS management console navigation
+  - Cost management and optimization
+  - VPC and networking fundamentals
+  - Support and troubleshooting processes
+  - AWS security best practices for beginners
+
+- **Documentation and Organization:**
+
+  - Set up comprehensive worklog and documentation structure
+  - Created organized learning material repository
+  - Established workflow for tracking progress
+  - Prepared foundation for project work
+
+- **Foundation Established:**
+  - Strong baseline knowledge of core AWS services
+  - Ready for project-based learning in Week 2
+  - Prepared for EC2 and networking deep-dive
 
 ### Next Week Goals:
 
-* Deep dive into specific AWS services based on project requirements.
-* Continue building documentation and refining workflow processes.
-* Explore more advanced AWS features and best practices.
+- Deep dive into specific AWS services based on project requirements.
+- Continue building documentation and refining workflow processes.
+- Explore more advanced AWS features and best practices.

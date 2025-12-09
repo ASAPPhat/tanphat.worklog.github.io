@@ -6,83 +6,94 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
+**Khoảng thời gian tuần: 8 - 14 tháng 9, 2025**
+
 ### Mục tiêu tuần 1:
 
-* Kết nối và làm quen với các thành viên trong First Cloud Journey.
-* Thiết lập môi trường phát triển và hiểu quy trình làm việc của chương trình FCJ.
-* Tạo tài khoản AWS Free Tier và khám phá các dịch vụ AWS cốt lõi.
-* Thiết lập quy trình tài liệu hóa cho hành trình thực tập.
+- Kết nối và làm quen với các thành viên trong First Cloud Journey.
+- Thiết lập môi trường phát triển và hiểu quy trình làm việc của chương trình FCJ.
+- Tạo tài khoản AWS Free Tier và khám phá các dịch vụ AWS cốt lõi.
+- Thiết lập quy trình tài liệu hóa cho hành trình thực tập.
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                          | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 1   | - Làm quen với các thành viên FCJ <br> - Hiểu quy trình làm việc và quy định của chương trình FCJ <br> - Định hướng và giới thiệu ban đầu                                         | 08/09/2025   | 08/09/2025      |                                           |
-| 2   | - Cài đặt Linux Fedora KDE Plasma 42 <br> - Học cách thiết lập và cấu hình Linux cơ bản <br> - Khắc phục sự cố cài đặt                                                            | 09/09/2025   | 09/09/2025      |                                           |
-| 3   | - Tạo tài khoản AWS Free Tier <br> - Khám phá các dịch vụ AWS Free Tier <br> - Hoàn thành các nhiệm vụ để nhận $200 tín dụng AWS                                                  | 10/09/2025   | 10/09/2025      | <https://aws.amazon.com/free/>            |
-| 4   | - Tiếp tục khám phá AWS Free Tier <br> - Xem xét các dịch vụ có sẵn: EC2, RDS, Lambda, VPC <br> - Hiểu giới hạn dịch vụ và ràng buộc free tier                                    | 11/09/2025   | 11/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Khám phá S3 buckets và các tùy chọn lưu trữ <br> - Học quản lý ngân sách AWS <br> - Thiết lập cảnh báo ngân sách hàng ngày và hàng tháng <br> - Tiếp tục khắc phục sự cố Linux | 12/09/2025   | 12/09/2025      | <https://aws.amazon.com/s3/>              |
-| 6   | - Hoàn thiện cấu hình ngân sách <br> - Xem xét bảng điều khiển Billing & Cost Management <br> - Hoàn tất khắc phục sự cố cài đặt Linux <br> - Thiết lập GitHub repos cho tài liệu | 13/09/2025   | 13/09/2025      |                                           |
+| Thứ       | Công việc                                                                                        | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                             |
+| --------- | ------------------------------------------------------------------------------------------------ | ------------ | --------------- | ------------------------------------------------------------------------------------------ |
+| Monday    | - **Bắt đầu Module 1:** <br> - **Lab 1 Thiết lập tài khoản AWS:**                                | 09/08/2025   | 09/08/2025      | https://youtu.be/HxYZAK1coOI?si=QzTgLWe-kpZEJ4m8 <br> https://000001.awsstudygroup.com/vi/ |
+| Tuesday   | - **Lab 7 Quản lý chi phí với AWS Account:** <br> - **Lab 9 Yêu cầu hỗ trợ với Amazon Support:** | 09/09/2025   | 09/09/2025      | https://000007.awsstudygroup.com/ <br> https://000009.awsstudygroup.com/                   |
+| Wednesday | - **Lý Thuyết Module 2:**                                                                        | 09/10/2025   | 09/10/2025      | https://youtu.be/O9Ac_vGHquM?si=NX9x5PJxBIFDO4dL                                           |
+| Thursday  | - **Lab 3: Amazon VPC and AWS Site-to-Site VPN Workshop**                                        | 09/11/2025   | 09/14/2025      | https://000003.awsstudygroup.com/                                                          |
+| Friday    | - Hoàn thiện các bài tập lab                                                                     | 09/12/2025   | 09/12/2025      | AWS Labs Documentation                                                                     |
+| Saturday  | - Hoàn thiện các bài tập lab và củng cố kiến thức đã học                                         | 09/13/2025   | 09/13/2025      | AWS Workshop Materials                                                                     |
 
 ### Kết quả đạt được tuần 1:
 
-* Đã tích hợp thành công với đội ngũ First Cloud Journey và hiểu được cấu trúc chương trình, quy trình làm việc và kỳ vọng.
+- **Hoàn thành Module 1 - Nền tảng AWS:**
 
-* Cài đặt và cấu hình Linux Fedora KDE Plasma 42 làm môi trường phát triển chính:
-  * Hoàn thành thiết lập Linux cơ bản
-  * Giải quyết các vấn đề cài đặt và cấu hình
-  * Làm quen với môi trường desktop KDE Plasma
+  - Hoàn thành thành công Module 1 lý thuyết và kiến thức cơ bản
+  - Hiểu biết về cơ sở hạ tầng cloud AWS
+  - Học các khái niệm AWS cốt lõi và thuật ngữ
+  - Thiết lập nền tảng cho các chủ đề AWS nâng cao
 
-* Tạo và cấu hình tài khoản AWS Free Tier:
-  * Đăng ký thành công AWS Free Tier
-  * Hoàn thành các nhiệm vụ cần thiết để nhận $200 tín dụng AWS
-  * Khám phá các dịch vụ free tier có sẵn
+- **Hoàn thành Lab 1 - Thiết lập tài khoản AWS:**
 
-* Có kinh nghiệm thực hành với các dịch vụ AWS cốt lõi:
-  * **EC2** - Elastic Compute Cloud cho máy chủ ảo
-  * **RDS** - Relational Database Service
-  * **Lambda** - Dịch vụ tính toán serverless
-  * **VPC** - Virtual Private Cloud networking
-  * **S3** - Simple Storage Service cho lưu trữ đối tượng
+  - Tạo tài khoản AWS Free Tier thành công
+  - Cấu hình AWS management console
+  - Thiết lập cài đặt bảo mật ban đầu và access keys
+  - Hiểu AWS billing và các nguyên tắc quản lý chi phí
 
-* Triển khai các phương pháp quản lý chi phí AWS tốt nhất:
-  * Thiết lập AWS Budgets để giám sát chi phí
-  * Cấu hình cảnh báo ngân sách hàng ngày
-  * Cấu hình ngưỡng ngân sách hàng tháng
-  * Khám phá bảng điều khiển Billing & Cost Management
+- **Hoàn thành Lab 7 - Quản lý chi phí với AWS Account:**
 
-* Thiết lập quy trình tài liệu hóa:
-  * Tạo các repository GitHub cho tài liệu hành trình AWS FCJ
-  * Thiết lập các template để quản lý worklog hiệu quả
-  * Tổ chức cấu trúc dự án cho tài liệu liên tục
+  - Học các chiến lược quản lý chi phí AWS
+  - Cấu hình billing alerts và notifications
+  - Hiểu các nguyên tắc tối ưu hóa chi phí
+  - Thực hành theo dõi ngân sách và dự báo
 
-* Đạt được kiến thức nền tảng:
-  * Quản lý và điều hướng tài khoản AWS cơ bản
-  * Quy tắc và quy trình hoạt động của chương trình FCJ
-  * Kiến thức cơ bản về quản trị hệ thống Linux
-  * Chiến lược tối ưu hóa chi phí cho tài nguyên đám mây
+- **Hoàn thành Lab 9 - Yêu cầu hỗ trợ với Amazon Support:**
 
-![AWS Free Tier Dashboard](/images/week1/aws-freetier-dashboard.png)
-*Tổng quan các dịch vụ AWS Free Tier*
+  - Học các gói AWS Support và tùy chọn
+  - Hiểu quản lý support cases
+  - Thực hành tạo và theo dõi support tickets
+  - Có kiến thức về các tài nguyên AWS Support
 
-![Budget Configuration](/images/week1/budget-setup.png)
-*Cấu hình cảnh báo ngân sách hàng ngày và hàng tháng*
+- **Hoàn thành Module 2 - Các khái niệm AWS Nâng cao:**
 
-### Thách thức gặp phải:
+  - Thành thạo các khái niệm cơ sở hạ tầng AWS nâng cao
+  - Hiểu sâu hơn các mẫu kiến trúc AWS
+  - Xây dựng dựa trên kiến thức nền tảng Module 1
+  - Chuẩn bị cho các bài tập lab thực hành
 
-* Một số vấn đề nhỏ khi cài đặt Linux cần khắc phục và điều chỉnh cấu hình.
-* Đường cong học tập ban đầu với việc điều hướng AWS console và khám phá dịch vụ.
+- **Hoàn thành Lab 3 - Amazon VPC và AWS Site-to-Site VPN Workshop:**
 
-### Bài học chính:
+  - Thiết lập thành công Virtual Private Cloud (VPC)
+  - Cấu hình VPC subnets và routing
+  - Thiết lập các kết nối Site-to-Site VPN
+  - Thực hành kết nối mạng hybrid
+  - Hiểu VPC security groups và network ACLs
 
-* Hiểu tầm quan trọng của quản lý chi phí ngay từ ngày đầu tiên trong môi trường đám mây.
-* Giá trị của tài liệu hóa đúng cách và các template quy trình làm việc cho sự thành công dự án dài hạn.
-* Kỹ năng quản trị hệ thống Linux cơ bản là cần thiết cho công việc điện toán đám mây.
+- **Các kỹ năng kỹ thuật chính được tích lũy:**
+
+  - Thiết lập và cấu hình tài khoản AWS
+  - Điều hướng AWS management console
+  - Quản lý và tối ưu hóa chi phí
+  - Cơ sở VPC và networking
+  - Các quy trình hỗ trợ và khắc phục sự cố
+  - Các phương pháp bảo mật AWS cho người mới bắt đầu
+
+- **Tài liệu và Tổ chức:**
+
+  - Thiết lập cấu trúc worklog và tài liệu hóa toàn diện
+  - Tạo kho lưu trữ tài liệu học tập được tổ chức
+  - Thiết lập quy trình theo dõi tiến độ
+  - Chuẩn bị nền tảng cho công việc dự án
+
+- **Nền tảng được thiết lập:**
+  - Kiến thức cơ sở vững chắc về các dịch vụ AWS cốt lõi
+  - Sẵn sàng cho học tập dựa trên dự án ở Tuần 2
+  - Chuẩn bị cho bước đi sâu về EC2 và networking
 
 ### Mục tiêu tuần tới:
 
-* Tìm hiểu sâu về các dịch vụ AWS cụ thể dựa trên yêu cầu dự án.
-* Tiếp tục xây dựng tài liệu và tinh chỉnh quy trình làm việc.
-* Khám phá các tính năng và phương pháp hay nhất của AWS nâng cao hơn.
-
-
+- Tìm hiểu sâu về các dịch vụ AWS cụ thể dựa trên yêu cầu dự án.
+- Tiếp tục xây dựng tài liệu và tinh chỉnh quy trình làm việc.
+- Khám phá các tính năng và phương pháp hay nhất của AWS nâng cao hơn.

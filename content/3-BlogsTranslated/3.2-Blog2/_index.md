@@ -1,123 +1,54 @@
 ---
-title: "Blog 2"
-date: "2025-09-22"
-weight: 1
+title: "Blog 2: Build next-gen AI agents"
+date: "2025-09-18"
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+## **[AWS Public Sector Blog](https://aws.amazon.com/blogs/publicsector/)**
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+# Build next-gen AI agents: AWS empowers partners with AWS Partner Transformation Program’s new agentic AI module for public sector
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
-
----
-
-## Architecture Guidance
-
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
-
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
-
-**The solution architecture is now as follows:**
-
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+_by Jasmine Thakkar and Mohan CV on 15 SEP 2025 in [Announcements](https://aws.amazon.com/blogs/publicsector/category/post-types/announcements/ "View all posts in Announcements"), [Artificial Intelligence](https://aws.amazon.com/blogs/publicsector/category/artificial-intelligence/ "View all posts in Artificial Intelligence"), [Partner solutions](https://aws.amazon.com/blogs/publicsector/category/post-types/partner-solutions/ "View all posts in Partner solutions"), [Public Sector](https://aws.amazon.com/blogs/publicsector/category/public-sector/ "View all posts in Public Sector"), [Public Sector Partners](https://aws.amazon.com/blogs/publicsector/category/public-sector/public-sector-partners/ "View all posts in Public Sector Partners")_
 
 ---
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+[![AWS branded background with text "Build next-gen AI agents: AWS empowers partners with AWS Partner Transformation Program's new agentic AI module for public sector"](https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/09/12/AWS-Public-Sector-Blog-Featured-Images-Blog-Header-static-template-Autosaved-13.png)](https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/09/12/AWS-Public-Sector-Blog-Featured-Images-Blog-Header-static-template-Autosaved-13.png)
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+The artificial intelligence (AI) revolution has entered an exhilarating new phase, and Amazon Web Services (AWS) is empowering partners to lead this transformation. Today, we’re excited to announce the launch of our new **agentic AI module** within the [AWS Partner Transformation Program (PTP),](https://aws.amazon.com/partners/programs/partner-transformation/) designed to accelerate partners’ capabilities in building autonomous AI solutions. This strategic initiative comes at a crucial time, as number of enterprise applications incorporating agentic AI continues to surge, presenting unprecedented opportunities for innovation in the public sector and beyond.
 
----
+However, as with any transformative technology, many organizations find themselves asking the same question: How do we move from big ideas to practical execution using agentic AI? That’s why the new PTP module features two carefully crafted pathways tailored to meet partners where they are in their agentic AI journey. The **Foundational Path** is designed for partners beginning their agentic AI journey, providing strategic insights and guided use case development that culminates in a functional proof-of-concept. For partners ready to move into production, the **Solution Development Path** offers accelerated technical implementation leveraging powerful AWS services including [Amazon Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/?refid=6da207ce-1440-41a4-b16f-3003bf7e4833), [Strands Agents](https://strandsagents.com/latest/?refid=6da207ce-1440-41a4-b16f-3003bf7e4833), and other technologies leading to production-ready minimum viable products (MVPs) that deliver immediate value to customers. AWS Partners can also publish completed solutions to the [AI Agent & Tools solution page](https://aws.amazon.com/marketplace/solutions/ai-agents-and-tools/?ams%23interactive-card-vertical%23pattern-data.filter=%257B%2522filters%2522%253A%255B%255D%257D) in AWS Marketplace.
 
-## Technology Choices and Communication Scope
+“AWS Partners are continuing to drive rapid AI adoption in public sector. With this new PTP module, we’re not just sharing technology, we’re providing a blueprint to accelerate AWS Partner offerings in the agentic AI space,” said Mike Cannady, director of partner core for public sector at AWS.
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Partners participating in the program gain access to an extensive suite of resources, including exclusive workshop content, implementation support from AWS experts, sandbox credits for development, and comprehensive guidance for AWS Marketplace listing.
 
----
+[![](https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/09/12/Picture3-5.png)](https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2025/09/12/Picture3-5.png)
+Figure 1. AWS PTP Agentic AI Module for building and scaling intelligent agent solutions
 
-## The Pub/Sub Hub
+At the heart of this initiative is the comprehensive portfolio of AWS agentic AI services, such as [Amazon Bedrock AgentCore](https://aws.amazon.com/bedrock/agentcore/?refid=6da207ce-1440-41a4-b16f-3003bf7e4833), [Amazon Q](https://aws.amazon.com/q/developer/build/?refid=6da207ce-1440-41a4-b16f-3003bf7e4833), [AWS Transform](https://aws.amazon.com/transform/?refid=6da207ce-1440-41a4-b16f-3003bf7e4833), [Strands Agents,](https://aws.amazon.com/blogs/opensource/introducing-strands-agents-1-0-production-ready-multi-agent-orchestration-made-simple/) and [Amazon Nova Act](https://labs.amazon.science/blog/nova-act?refid=6da207ce-1440-41a4-b16f-3003bf7e4833). These powerful tools enable partners to build sophisticated AI agents that can understand, decide, and act autonomously while maintaining the highest standards of security and compliance—crucial requirements for public sector implementations.
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+“Building off the excitement of the [AWS Summit New York City](https://aws.amazon.com/events/summits/new-york/), we are making AWS the best place for the world’s most useful agents. PTP brings technical enablement to empower our partners to create agentic experiences that fundamentally transform how the public sector serves its citizens,_”_ shared Alex Martinez, director of public sector, partner solutions architecture at AWS.
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+The potential applications are transformative: from AI agents that optimize government operations and enhance citizen services to systems that revolutionize healthcare delivery and educational experiences. As organizations worldwide seek to harness these capabilities, AWS Partners are uniquely positioned to lead this next wave of innovation, backed by the most comprehensive and secure cloud platform for AI development.
+
+Building on the AWS commitment to partner success, the new PTP module delivers a robust framework of structured approaches, best practices, governance, and guardrails—enabling partners to accelerate development cycles, minimize risks, and unlock the full potential of agentic AI solutions.
+
+Partners interested in joining this new module can contact their AWS Partner account manager or partner development manager to learn more about the [PTP program](https://aws.amazon.com/partners/programs/partner-transformation/) and begin their agentic AI journey. The future of AI is agent-based, secure, and built on AWS—and our partners are at the forefront of this exciting transformation.
 
 ---
 
-## Core Microservice
+TAGS: [announcement](https://aws.amazon.com/blogs/publicsector/tag/announcement/), [Artificial Intelligence](https://aws.amazon.com/blogs/publicsector/tag/artificial-intelligence/), [AWS Public Sector](https://aws.amazon.com/blogs/publicsector/tag/aws-public-sector/), [AWS Public Sector Partners](https://aws.amazon.com/blogs/publicsector/tag/aws-public-sector-partners/)
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
+![Enter image alt description](/images/Blog/blog2/Picture2-6.png)
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+### Jasmine Thakkar
 
----
+Jasmine is a global lead for the AWS Partner Transformation Program (PTP), where she helps AWS Partners accelerate their cloud journey and drive meaningful transformation for citizens through public sector innovation. She leads a comprehensive program that equips partners with strategic guidance, technical expertise, and best practices enabling them to build successful cloud practices while driving growth and delivering better outcomes for customers.
 
-## Front Door Microservice
+![Enter image alt description](/images/Blog/blog2/Picture1-13.png)
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
+### Mohan CV
 
----
-
-## Staging ER7 Microservice
-
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
-
----
-
-## New Features in the Solution
-
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+Mohan is a principal architect at AWS, passionate about helping partners and customers leverage emerging technologies like agentic AI to transform their organizations and deliver innovative solutions that address complex business challenges. He brings extensive experience in leading large-scale digital transformations, specializing in data and AI.

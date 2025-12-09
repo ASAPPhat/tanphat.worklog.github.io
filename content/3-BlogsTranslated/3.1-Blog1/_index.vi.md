@@ -1,123 +1,69 @@
 ---
-title: "Blog 1"
-date: "2025-09-22"
+title: "Blog 1: Tổng hợp Hàng tuần AWS - Strands Agents"
+date: "2025-09-15"
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+## **[Blog Tin tức AWS](https://aws.amazon.com/blogs/aws/)**
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+# Tổng hợp hàng tuần của AWS: Strands Agents đạt hơn 1 triệu lượt tải xuống, Cloud Club Captain, AI Agent Hackathon, và nhiều hơn nữa (ngày 15 tháng 9 năm 2025)
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+![Enter image alt description](/images/Blog/blog1/2025-strands-agents-1m-download.png)
 
----
+bởi[ ](https://aws.amazon.com/blogs/aws/author/channy-yun/)[Channy Yun (윤석찬)](https://aws.amazon.com/blogs/aws/author/channy-yun/) vào ngày 15 THÁNG 9 2025 trong[ ](https://aws.amazon.com/blogs/aws/category/networking-content-delivery/amazon-cloudfront/)[Amazon CloudFront](https://aws.amazon.com/blogs/aws/category/networking-content-delivery/amazon-cloudfront/),[ ](https://aws.amazon.com/blogs/aws/category/compute/amazon-ec2-mac-instances/)[Amazon EC2 Mac Instances](https://aws.amazon.com/blogs/aws/category/compute/amazon-ec2-mac-instances/),[ ](https://aws.amazon.com/blogs/aws/category/developer-tools/aws-cloud-development-kit/)[AWS Cloud Development Kit](https://aws.amazon.com/blogs/aws/category/developer-tools/aws-cloud-development-kit/),[ ](https://aws.amazon.com/blogs/aws/category/management-tools/aws-cloudtrail/)[AWS CloudTrail](https://aws.amazon.com/blogs/aws/category/management-tools/aws-cloudtrail/),[ ](https://aws.amazon.com/blogs/aws/category/compute/aws-lambda/)[AWS Lambda](https://aws.amazon.com/blogs/aws/category/compute/aws-lambda/),[ ](https://aws.amazon.com/blogs/aws/category/artificial-intelligence/aws-trainium/)[AWS Trainium](https://aws.amazon.com/blogs/aws/category/artificial-intelligence/aws-trainium/),[ ](https://aws.amazon.com/blogs/aws/category/news/)[News](https://aws.amazon.com/blogs/aws/category/news/),[ ](https://aws.amazon.com/blogs/aws/category/open-source/)[Open Source](https://aws.amazon.com/blogs/aws/category/open-source/),[ ](https://aws.amazon.com/blogs/aws/category/startup/)[Startup](https://aws.amazon.com/blogs/aws/category/startup/)[ ](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-strands-agents-1m-downloads-cloud-club-captain-ai-agent-hackathon-and-more-september-15-2025/)[Đường dẫn cố định](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-strands-agents-1m-downloads-cloud-club-captain-ai-agent-hackathon-and-more-september-15-2025/)[ ](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-strands-agents-1m-downloads-cloud-club-captain-ai-agent-hackathon-and-more-september-15-2025/#Comments)[Bình luận](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-strands-agents-1m-downloads-cloud-club-captain-ai-agent-hackathon-and-more-september-15-2025/#Comments)[ ](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-strands-agents-1m-downloads-cloud-club-captain-ai-agent-hackathon-and-more-september-15-2025/#)[Chia sẻ](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-strands-agents-1m-downloads-cloud-club-captain-ai-agent-hackathon-and-more-september-15-2025/#)
 
-## Hướng dẫn kiến trúc
+Tuần trước,[ ](https://strandsagents.com/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[Strands Agents](https://strandsagents.com/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el), mã nguồn mở SDK của AWS dành cho AI agentic, vừa đạt 1 triệu lượt tải xuống và nhận hơn 3.000 Sao GitHub chưa đầy 4 tháng kể từ khi[ ](https://aws.amazon.com/blogs/opensource/introducing-strands-agents-1-0-production-ready-multi-agent-orchestration-made-simple/)[ra mắt bản xem trước vào tháng 5 năm 2025](https://aws.amazon.com/blogs/opensource/introducing-strands-agents-1-0-production-ready-multi-agent-orchestration-made-simple/). Với Strands Agents, bạn có thể xây dựng các hệ thống AI đa agent sẵn sàng cho sản xuất chỉ trong vài dòng code.
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+Chúng tôi đã liên tục cải tiến các tính năng bao gồm hỗ trợ cho các mẫu đa agent, giao thức A2A và Amazon Bedrock AgentCore. Bạn có thể sử dụng[ ](https://strandsagents.com/latest/documentation/docs/examples/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[bộ sưu tập các mẫu triển khai](https://strandsagents.com/latest/documentation/docs/examples/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) để giúp bạn bắt đầu xây dựng các agent thông minh bằng Strands Agents. Chúng tôi luôn hoan nghênh[ ](https://github.com/strands-agents/sdk-python/blob/main/CONTRIBUTING.md)[sự đóng góp và phản hồi của bạn](https://github.com/strands-agents/sdk-python/blob/main/CONTRIBUTING.md) cho dự án của chúng tôi, bao gồm báo cáo lỗi, tính năng mới, sửa lỗi hoặc tài liệu bổ sung.
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+Đây là bài báo nghiên cứu mới nhất của Amazon Science về[ ](https://www.amazon.science/blog/scientific-frontiers-of-agentic-ai?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[tương lai của AI agentic và những câu hỏi](https://www.amazon.science/blog/scientific-frontiers-of-agentic-ai?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) mà các nhà khoa học đang đặt ra về giao tiếp giữa các agent, hiểu biết ngữ cảnh, suy luận thông thường và nhiều hơn nữa. Bạn có thể hiểu chủ đề kỹ thuật của AI agentic với các ví dụ dễ hiểu, bao gồm một ví dụ về hành vi cá nhân của chúng ta về việc để cửa mở hoặc đóng, khóa hoặc không khóa.
 
-**Kiến trúc giải pháp bây giờ như sau:**
+## Các ra mắt tuần trước
 
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+Dưới đây là một số lần ra mắt đã thu hút sự chú ý của tôi:
 
----
+- [Các phiên bản Amazon EC2 M4 và M4 Pro Mac](https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-m4-and-m4-pro-mac-instances/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Các phiên bản Mac M4 mới cung cấp hiệu suất xây dựng ứng dụng tốt hơn tới 20% so với các phiên bản Mac M2, trong khi các phiên bản Mac M4 Pro mang lại hiệu suất xây dựng ứng dụng tốt hơn tới 15% so với các phiên bản Mac M2 Pro. Các phiên bản này lý tưởng để xây dựng và thử nghiệm các ứng dụng cho các nền tảng của Apple như iOS, macOS, iPadOS, tvOS, watchOS, visionOS và Safari.
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+- [Tích hợp LocalStack trong Visual Studio Code (VS Code)](https://aws.amazon.com/blogs/aws/accelerate-serverless-testing-with-localstack-integration-in-vs-code-ide/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Bạn có thể sử dụng LocalStack để mô phỏng cục bộ và thử nghiệm các ứng dụng serverless của mình bằng giao diện VS Code mà không cần chuyển đổi giữa các công cụ hoặc thiết lập quản lý phức tạp, qua đó đơn giản hóa quy trình phát triển serverless cục bộ của bạn.
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+- [Tái cấu trúc AWS Cloud Development Kit (AWS CDK) (Bản xem trước)](https://aws.amazon.com/blogs/devops/aws-cloud-development-kit-cdk-launches-refactor/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Bạn có thể đổi tên các cấu trúc, di chuyển tài nguyên giữa các stack và tổ chức lại các ứng dụng CDK trong khi vẫn giữ nguyên trạng thái của các tài nguyên đã triển khai. Bằng cách sử dụng[ ](https://aws.amazon.com/about-aws/whats-new/2025/02/reshape-aws-cloudformation-stack-refactoring/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[khả năng tái cấu trúc của AWS CloudFormation](https://aws.amazon.com/about-aws/whats-new/2025/02/reshape-aws-cloudformation-stack-refactoring/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) với tính toán ánh xạ tự động, Tái cấu trúc CDK loại bỏ nguy cơ thay thế tài nguyên ngoài ý muốn trong quá trình tái cấu trúc mã.
 
----
+- [Máy chủ AWS CloudTrail MCP](https://awslabs.github.io/mcp/servers/cloudtrail-mcp-server?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Máy chủ AWS CloudTrail MCP mới cho phép các trợ lý AI phân tích các lệnh gọi API, theo dõi hoạt động của người dùng và thực hiện phân tích bảo mật nâng cao trên môi trường AWS của bạn thông qua các tương tác bằng ngôn ngữ tự nhiên. Bạn có thể khám phá thêm[ ](https://awslabs.github.io/mcp/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[các máy chủ AWS MCP](https://awslabs.github.io/mcp/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) để làm việc với các tài nguyên dịch vụ AWS.
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
+- [Amazon CloudFront hỗ trợ các nguồn gốc IPv6](https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-cloudfront-ipv6-origins/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Các ứng dụng của bạn có thể gửi lưu lượng IPv6 đến tận nguồn gốc của chúng, cho phép chúng đáp ứng các yêu cầu kiến trúc và quy định về việc áp dụng IPv6. Hỗ trợ IPv6 từ đầu đến cuối cải thiện hiệu suất mạng cho người dùng cuối kết nối qua mạng IPv6 và cũng loại bỏ các lo ngại về việc cạn kiệt địa chỉ IPv4 cho cơ sở hạ tầng nguồn gốc.
 
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Để có danh sách đầy đủ các thông báo của AWS, hãy chắc chắn theo dõi trang[ ](https://aws.amazon.com/new/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[Có gì mới với AWS?](https://aws.amazon.com/new/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el).
 
----
+## Tin tức khác của AWS
 
-## The pub/sub hub
+Dưới đây là một số tin tức bổ sung mà bạn có thể thấy thú vị:
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+- [Một thành phố trong lòng bàn tay của bạn](https://www.aboutamazon.com/stories/ai-chips-aws-Trainium2-explain?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Hãy xem tính năng tương tác này giải thích cách các nhà thiết kế chip AWS Trainium của chúng tôi suy nghĩ như những nhà quy hoạch thành phố, tối ưu hóa từng nanomet để di chuyển dữ liệu với tốc độ gần bằng tốc độ ánh sáng.
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+- [Đo lường hiệu quả của các công cụ và thực tiễn phát triển phần mềm](https://www.amazon.science/blog/measuring-the-effectiveness-of-software-development-tools-and-practices?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Đọc cách các nhà phát triển Amazon đã xác định các thách thức cụ thể trước khi áp dụng các công cụ AI đã cắt giảm chi phí 15,9% so với cùng kỳ năm ngoái bằng cách sử dụng khung chi phí phục vụ phần mềm (CTS-SW) của chúng tôi. Họ đã triển khai thường xuyên hơn và giảm 30,4% các can thiệp thủ công bằng cách tập trung vào các vấn đề đúng đắn trước tiên.
 
----
+- [Trở thành Đội trưởng AWS Cloud Club](https://builder.aws.com/content/30aH27Sct6i1eSqKOPEMzwwv3GN/become-an-aws-cloud-club-captain-applications-open?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Tham gia mạng lưới ngày càng lớn mạnh của những sinh viên đam mê điện toán đám mây bằng cách trở thành Đội trưởng AWS Cloud Club! Với tư cách là Đội trưởng, bạn sẽ được tổ chức các sự kiện và xây dựng cộng đồng điện toán đám mây trong khi phát triển kỹ năng lãnh đạo. Thời gian nộp đơn từ ngày 1 đến ngày 28 tháng 9 năm 2025.
 
-## Core microservice
+## Các sự kiện AWS sắp tới
 
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
+Kiểm tra lịch của bạn và đăng ký tham gia các sự kiện AWS sắp tới cũng như[ ](https://reinvent.awsevents.com/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[AWS re:Invent](https://reinvent.awsevents.com/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) và[ ](https://aws.amazon.com/events/summits/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[AWS Summits](https://aws.amazon.com/events/summits/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el):
 
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
+- [AWS AI Agent Global Hackathon](https://info.devpost.com/blog/aws-ai-agent-global-hackathon?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Đây là cơ hội để bạn tìm hiểu sâu về bộ công cụ AI tạo sinh mạnh mẽ của chúng tôi và tạo ra một thứ gì đó thực sự tuyệt vời. Từ ngày 8 tháng 9 đến ngày 20 tháng 10, bạn có cơ hội tạo ra các agent AI bằng cách sử dụng bộ dịch vụ AI của AWS, cạnh tranh để giành giải thưởng hơn 45.000 đô la và các cơ hội tiếp cận thị trường độc quyền.
 
----
+- [AWS Gen AI Lofts](https://aws.amazon.com/startups/lp/aws-gen-ai-lofts?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Bạn có thể tìm hiểu các sản phẩm và dịch vụ AWS AI với các phiên độc quyền và gặp gỡ các chuyên gia hàng đầu trong ngành, cũng như có cơ hội kết nối giá trị với các nhà đầu tư và đồng nghiệp. Đăng ký tại thành phố gần nhất của bạn:[ ](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-mexico-city?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[Thành phố Mexico](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-mexico-city?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) (30 tháng 9–2 tháng 10),[ ](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-paris?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[Paris](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-paris?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) (7–21 tháng 10),[ ](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-london?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[London](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-london?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) (13–21 tháng 10), và[ ](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-tel-aviv?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[Tel Aviv](https://aws.amazon.com/startups/lp/aws-gen-ai-loft-tel-aviv?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) (11–19 tháng 11).
 
-## Front door microservice
+- [Ngày hội Cộng đồng AWS](https://aws.amazon.com/events/community-day/?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) – Tham gia các hội nghị cộng đồng, bao gồm các cuộc thảo luận kỹ thuật, hội thảo và các phòng lab thực hành do các chuyên gia sử dụng AWS và các nhà lãnh đạo ngành công nghiệp từ khắp nơi trên thế giới dẫn dắt:[ ](https://aws-community-day.nz/inperson.html)[Aotearoa](https://aws-community-day.nz/inperson.html) và[ ](https://awscommunity.pl/)[Ba Lan](https://awscommunity.pl/) (18 tháng 9),[ ](https://www.awscommunityday.co.za/)[Nam Phi](https://www.awscommunityday.co.za/) (20 tháng 9),[ ](https://www.facebook.com/awscommunitydaybolivia/)[Bolivia](https://www.facebook.com/awscommunitydaybolivia/) (20 tháng 9),[ ](https://awscommunityday.pt/)[Bồ Đào Nha](https://awscommunityday.pt/) (27 tháng 9),[ ](https://www.aws-community-day.de/)[Đức](https://www.aws-community-day.de/) (7 tháng 10), và[ ](https://awscommunity.eu/)[Hungary](https://awscommunity.eu/) (16 tháng 10).
 
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
+Bạn có thể xem[ ](https://aws.amazon.com/events/explore-aws-events?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[tất cả các sự kiện AWS sắp tới](https://aws.amazon.com/events/explore-aws-events?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el) và[ ](https://aws.amazon.com/startups/events?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el)[các sự kiện khởi nghiệp của AWS](https://aws.amazon.com/startups/events?trk=769a1a2b-8c19-4976-9c45-b6b1226c7d20&sc_channel=el).
 
----
+Đó là tất cả cho tuần này. Hãy quay lại vào thứ Hai tới để xem một bản Tổng hợp hàng tuần khác!
 
-## Staging ER7 microservice
+—[ ](https://linkedin.com/in/channy/)[Channy](https://linkedin.com/in/channy/)
 
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
+![Enter image alt description](/images/Blog/blog1/channyun_400x400.png)
 
----
+### **[Channy Yun (윤석찬)](https://aws.amazon.com/blogs/aws/author/channy-yun/)**
 
-## Tính năng mới trong giải pháp
-
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+Channy là một Chuyên viên hỗ trợ phát triển chính cho AWS. Là một người đam mê open web và là một blogger tận tâm, anh ấy yêu thích việc học hỏi và chia sẻ công nghệ do cộng đồng thúc đẩy.

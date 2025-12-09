@@ -1,0 +1,250 @@
+WEEK 1
+Monday
+Bắt đầu Module 1: https://youtu.be/HxYZAK1coOI?si=QzTgLWe-kpZEJ4m8
+Lab 1 Thiết lập tk AWS: https://000001.awsstudygroup.com/vi/
+
+
+Tuesday
+Lab 7 cost management with AWS Account: https://000007.awsstudygroup.com/
+Lab 9 Request support with Amazon support: https://000009.awsstudygroup.com/ 
+
+Wednesday
+Lý Thuyết Module 2: https://youtu.be/O9Ac_vGHquM?si=NX9x5PJxBIFDO4dL
+
+Thursday
+Lab 3: Amazon VPC and AWS Site-to-Site VPN Workshop
+ + Ngày bắt đầu: 11/9
+ + Ngày hoàn thành: 14/9
+ + Tài liệu tham khảo: Lab 3.1.1 - 3.1.4, Lab 3.2.1 - 3.2.3
+
+
+Week2
+Monday 
+Lab4 Introduction EC2: https://000004.awsstudygroup.com/
+
+Wednesday
+Lab 10 Set up Hybrid DNS with Route 53 Resolver: https://000010.awsstudygroup.com/
+AWS Clouddays
+
+Saturday/Sunday
+Tìm dataset cho project:
+ + Ngày bắt đầu: 20/9
+ + Ngày hoàn thành: 21/9
+ + Tài liệu tham khảo: Employee Performance and Productivity Data, Employee's Performance for HR Analytics, Employee Performance Dataset, Resume Dataset
+
+Week3
+Monday 
+Lab 10 Set up Hybrid DNS with Route 53 Resolver(continue) : https://000010.awsstudygroup.com/
+
+
+Tuesday/Wednesday 
+Lab 19 Setting up VPC Peering: https://000019.awsstudygroup.com/
+
+Thursday (Tiếp)
+WorkFlow cho project:
+ + Ngày bắt đầu: 25/9
+ + Ngày hoàn thành: 25/9
+ + Tài liệu tham khảo: Tham khảo từ
+
+Friday (Tiếp)
+Dùng AI Gen + check Data version 1:
+ + Ngày bắt đầu: 26/9
+ + Ngày hoàn thành: 29/9
+
+Week4:
+	Liên kết danh tính với AWS Single Sign-On
+Quản lý quyền hạn với IAM Permission Boundaries
+Kiểm soát truy cập với IAM Policies và Conditions
+Tuân thủ bảo mật với AWS Security Hub
+Truy cập riêng tư đến S3 với VPC Endpoints
+Bảo vệ ứng dụng với AWS WAF
+Mã hóa với AWS Key Management Service (KMS)
+Bảo vệ dữ liệu với Amazon Macie
+Quản lý thông tin xác thực với AWS Secrets Manager
+Quản trị bảo mật với AWS Firewall Manager
+Phát hiện mối đe dọa với AWS GuardDuty
+Vá lỗi hệ thống với EC2 Image Builder
+Xác thực liên miền với Amazon Cognito
+Các phương pháp bảo mật tốt nhất cho S3
+
+
+Week 5
+Bảo vệ dữ liệu với AWS Backup
+Tích hợp mạng với VPC Peering
+Quản lý mạng tập trung với AWS Transit Gateway
+Hệ thống nhắn tin với SQS và SNS
+
+
+
+Week 6
+Monday
+Amazon RDS: Link: https://000005.awsstudygroup.com/vi/
+	+Create VPC, EC2 sg, RDS sg, DB subnet group
+	+EC2 instance for RDS
+	+Create RDS Database instance 
+	+Deploy application
+	+Back up and restore 
+
+Tuesday 
+	Deploying FCJ Management Application with Auto Scaling Group Link: https://000006.awsstudygroup.com/vi/
+		+Preparation step: Set up VPC,Create EC2 Instance, Create database with amazon rds
+		+Launch template:  Create AMI from EC2, Launch template in EC2
+		+Setting up Load balancer: Create target group, Create Load balancer
+		+Testing
+		+Create auto scaling group
+		+Test solution with Paessler: test manual scaling solution, schedule scaling solution, dynamic scaling solution
+	
+Wednesday
+	Cloudwatch https://000008.awsstudygroup.com/vi/
+	Amazon DynamoDB https://000060.awsstudygroup.com/vi/
+
+Thursday
+	Workshop Data Science on AWS
+		+AWS AI/ML Stack
+		+Amazon Comprehend
+		+Amazon Translate
+		+Amazon Textract
+		+Amazon Polly and Amazon transcribe
+		+Amazon Rekognition
+
+Friday
+	AWS Networking and Content Delivery https://000092.awsstudygroup.com/vi/
+
+Saturday
+	Review Secure Architectures
+		+IAM, MFA, SCP
+		+Encryption (KMS, TLS/ACM)
+		+ Security Groups, NACLs
+		+GuardDuty, Shield, WAF, Secrets Manager
+Sunday:
+	Optimizing EC2 Costs with Lambda
+		+
+	
+
+————————
+
+Week 7
+Monday
+
+Tuesday
+             Serverless Lambda S3 DynamoDB: https://000078.awsstudygroup.com/vi/
+		+
+	Serverless - A Guide to Writing Front-End Code for Calling API Gateway: https://000079.awsstudygroup.com/vi/
+		+
+	 
+
+Wednesday
+	Review midterm: Resilient architecture
+
+Thursday
+	Continue reviewing Resilient architect
+	Draw AWS ArchitecArchitect
+
+Friday
+	Amazon Bedrocks tutorials
+		+How to use Bedrocks
+		+Lex + Lambda + Bedrock
+
+	AWS CLI : https://000011.awsstudygroup.com/vi/
+		+AWS With S3, SNS, IAM, VPC
+		+Creating EC2 with AWS CLI
+		
+—-------------------
+
+WEEK8
+	Review midterm 
+
+WEEK 9
+	Monday: 
+Advanced Monitoring Cloudwatch and grafana https://000029.awsstudygroup.com/vi/
+	+
+
+Proposal
+
+Tuesday:
+	Cloudfront with S3: https://000094.awsstudygroup.com/vi/
+		+
+	MANAGE ACCESS TO EC2 SERVICES WITH RESOURCE TAGS THROUGH IAM SERVICES https://000048.awsstudygroup.com/vi/
++
+	
+	Wednesday 
+		Manage Patches and Run Commands on Multiple Servers with AWS System         Manager https://000031.awsstudygroup.com/vi/
+			+
+ 
+		Work with Amazon System Manager - Session Manager https://000058.awsstudygroup.com/vi/
+			+
+	
+	Friday
+		Choose the correct EC2 size https://000032.awsstudygroup.com/vi/
+			+
+		Monitor network infraastructure https://000074.awsstudygroup.com/vi/
+			+
+		Automatically Archive Amazon EBS Snapshots with Amazon Data Lifecycle Manager https://000088.awsstudygroup.com/vi/
+			+
+		
+
+WEEK 10:
+	Monday: 	
+		Phân chia công việc cho project
+		Learn how to use AWS Lambda with Python 
+		Create IAM Roles for project 
+		Sửa proposal 
+Coding function 		
+
+	Tuesday:
+		Learn how to use AWS Lambda with Python 
+		Review + Fix proposal
+	
+	Wednesday:
+		Coding + demo function dashboard 
+		Feedback function
+
+	Thursday:
+		Fix dashboard
+		Brainstorm UI design template
+		Feedback function 
+	
+	Saturday:
+		AWS Cloud Mastery Series #1: AI/ML
+
+	Sunday	
+		Fix + Deploy demo function Dashboard 
+
+WEEK 11
+	Monday 
+		AWS Cloud Mastery Series #1
+
+	Tuesday:
+		+Gen demo data
+		+Update Dashboard Function
+
+	Wednesday:
+		Update Function 
+		Coding manage absent function
+	
+		
+	Saturday
+		Docker tutorial: https://youtu.be/pg19Z8LL06w?si=QyLqSkxfBPJ1ygbu
+		Demo + Fix push docker to ECR
+		Feedback UI/UX for dashboard function 
+
+Week12
+	MondaMonday
+		Demo + Test Amazon Bedrock
+		Function Manage absnet employee
+	
+	Tuesday:
+		Code function chatbot
+		Fix auto_scoring_function
+		Creating workflow for manage absent 
+	Wednesday:
+		Config + deploy demo chatbot
+
+	Thursday:
+		Fix chatbot query function + RAG research
+
+	Friday:
+		-Finish chatbot
+		-Remake Check attendance: 
+			+Check in/out function
+			+Absent management 

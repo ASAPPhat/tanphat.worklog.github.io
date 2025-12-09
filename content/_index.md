@@ -5,19 +5,19 @@ weight: 1
 chapter: false
 ---
 
-    
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Đỗ Đăng Khoa
 
-&emsp; **Phone Number:** 0783759971 
+&emsp; **Full Name:** Bùi Tấn Phát
 
-&emsp; **Email:** khoado7577@gmail.com
+&emsp; **Phone Number:** 0815928038
+
+&emsp; **Email:** btfat3103@gmail.com
 
 &emsp; **University:** FPT University
 
-&emsp; **Major:** Software Engineering/ IC design major
+&emsp; **Major:** Artificial Inteligent
 
 &emsp; **Class:** AWS082025
 
